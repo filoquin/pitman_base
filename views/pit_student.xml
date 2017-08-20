@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="pit_student_kanban_view">
+            <field name="name">pit.student.kanban</field>
+            <field name="model">pit.student</field>
+            <field name="arch" type="xml">
+                <kanban class="o_pit_student_kanban">
+                    <field name="color"/>
+                    <field name="display_name"/>
+                    <field name="email"/>
+                    <field name="parent_id"/>
+                    <field name="is_company"/>
+                    <field name="function"/>
+                    <field name="phone"/>
+                    <field name="street"/>
+                    <field name="street2"/>
+                    <field name="zip"/>
+                    <field name="city"/>
+                    <field name="country_id"/>
+                    <field name="mobile"/>
+                    <field name="state_id"/>
+                    <field name="category_id"/>
+                    <field name="image"/>
+                    <field name="type"/>
+                    <field name="code"/>
+                    <field name="partner_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_pit_student_kanban">
+                                <div class="o_kanban_tags_section oe_kanban_partner_categories"/>
+                                <div class="o_kanban_image">
+                                    <t t-if="record.image.raw_value">
+                                        <img t-att-src="kanban_image('pit.student', 'image_small', record.id.value)"/>
+                                    </t>
+                                    <t t-if="!record.image.raw_value">
+                                        <img t-att-src='_s + "/base/static/src/img/avatar.png"'/>
+                                    </t>
+                                </div>
+
+                                <div class="oe_kanban_details">
+                                    <strong class="oe_partner_heading"><field name="display_name"/></strong>
+                                    <ul>
+                                        <li t-if="record.parent_id.raw_value and !record.function.raw_value"><field name="parent_id"/></li>
+                                        <li t-if="!record.parent_id.raw_value and record.function.raw_value"><field name="function"/></li>
+                                        <li t-if="record.parent_id.raw_value and record.function.raw_value"><field name="function"/> at <field name="parent_id"/></li>
+                                        <li t-if="record.city.raw_value and !record.country_id.raw_value"><field name="city"/></li>
+                                        <li t-if="!record.city.raw_value and record.country_id.raw_value"><field name="country_id"/></li>
+                                        <li t-if="record.city.raw_value and record.country_id.raw_value"><field name="city"/>, <field name="country_id"/></li>
+                                        <li t-if="record.email.raw_value" class="o_text_overflow"><field name="email"/></li>
+                                    </ul>
+                                    <div class="oe_kanban_partner_links"/>
+                                </div>
+                            </div>
+
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="pit_student_tree" model="ir.ui.view">
+            <field name="name">pit.student.tree</field>
+            <field name="model">pit.student</field>
+            <field name="arch" type="xml">
+                <tree string="student" >
+                    <field name="code" />
+                    <field name="name" />
+                    <field name="gender" />
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="pit_student_form_view" model="ir.ui.view">
+            <field name="name">pit.student.form</field>
+            <field name="model">pit.student</field>
+            <field name="mode">primary</field>
+            <field eval="7" name="priority"/>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <form position="attributes">
+                    <attribute name="string">Student</attribute>
+                </form>
+                <field name="name" position="after">
+                    <field name="code"/>
+                    <field name="id" readonly="1" invisible="1"/>
+
+                    <field name="partner_id" class="oe_inline" readonly="1" invisible="1" attrs="{'required': [('id', '!=', False)]}"/>
+                </field>
+                <field name="company_type" position="replace"/>
+
+
+                  <xpath expr="//notebook[last()]" position="inside">
+                    <page string="Student">
+                                    <group>
+
+                        <field name="emergency_contact"/>
+                        <field name="gender"/>
+                        <field name="blood_group"/>        
+                        <field name="allergies"/>
+            </group>
+
+                    </page>
+                    <page string="family">
+              
+                        <group>
+          <field name="family_ids"/>
+            </group>
+
+                    </page>
+
+                </xpath>
+
+
+
+
+
+
+            </field>
+        </record>
+        
+
+
+
+        <record id="action_pit_student" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pit.student</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_pit_student_form">
+            <field name="act_window_id" ref="action_pit_student" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="pit_student_form_view" />
+        </record>
+        <record model="ir.actions.act_window.view" id="action_pit_student_tree">
+            <field name="act_window_id" ref="action_pit_student" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="pit_student_tree" />
+        </record>
+        <record model="ir.actions.act_window.view" id="action_pit_student_kanban">
+            <field name="act_window_id" ref="action_pit_student" />
+            <field name="sequence" eval="5" />
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="pit_student_kanban_view" />
+        </record>
+
+
+
+
+        <menuitem id="menu_pit_student_root" action="action_pit_student" parent="menu_pit_root"  name="Student" sequence="15" />
+        <menuitem id="menu_pit_student" action="action_pit_student" name="Students" parent="menu_pit_student_root" sequence="12"/>
+    </data>
+</openerp>
