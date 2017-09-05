@@ -19,12 +19,16 @@
 #
 ##############################################################################
 from openerp import models, fields, api
-from openerp import tools
-
-from openerp.tools.translate import _
-
-import logging
-
-_logger = logging.getLogger(__name__)
 
 
+class res_partner(models.Model):
+    _inherit = 'res.partner'
+
+    is_student = fields.Boolean(
+        string='Student',
+        help='Check if the partner is a Student',
+    )
+    is_teacher = fields.Boolean(
+        string='Teacher',
+        help='Check if the partner is a Teacher',
+    )

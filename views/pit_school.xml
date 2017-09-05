@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_pit_school_tree" model="ir.ui.view">
+            <field name="name">pit.school.tree</field>
+            <field name="model">pit.school</field>
+            <field name="arch" type="xml">
+                <tree string="school">
+                    <field name="code" />
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_pit_school" model="ir.ui.view">
+            <field name="name">school</field>
+            <field name="model">pit.school</field>
+            <field name="arch" type="xml">
+                <form string="school">
+                    <header>
+                    </header>
+
+                    <group col="4">
+                        <field name="name" />
+                        <field name="code" />
+                        <field name="active" />
+                        <field name="teacher_id" />
+
+
+                    </group>
+                    <group string="course">
+
+                        <field name="course_ids" >
+                            <tree >
+                                <field name="name" />
+                                <field name="code" />
+                            </tree>
+                        </field>
+
+                    </group>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="pit_school_view_search" model="ir.ui.view">
+            <field name="name">pit.school.search</field>
+            <field name="model">pit.school</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="location">
+                    <field name="name"/>
+
+                </search>
+            </field>
+        </record>
+
+        <record id="pit_school_action" model="ir.actions.act_window">
+            <field name="name">Carrer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pit.school</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_pit_school_tree" />
+        </record>
+
+        <menuitem id="menu_pit_school" action="pit_school_action" name="school" parent="menu_pit_config_root" sequence="10"/>
+
+
+
+
+    </data>
+</openerp>

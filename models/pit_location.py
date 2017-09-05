@@ -30,24 +30,35 @@ _logger = logging.getLogger(__name__)
 
 class pit_location(models.Model):
 
-    _name = "pit.Localion"
+    _name = "pit.location"
     _description = "Location"
 
     code = fields.Char('Code', index=True)
     name = fields.Char('Name')
-    classroom_ids = fields.One2many('pit.Localion.classroom','location_id','Workloads')
-    company_id = fields.Many2one('res.company', 'Company', select=1),
+    classroom_ids = fields.One2many('pit.location.classroom','location_id','Workloads')
+    company_id = fields.Many2one('res.company', 'Company', select=1)
 
-    active = fields.Boolean('Active' )
+    street = fields.Char('Street')
+
+    street =  fields.Char('Street')
+    street2 =  fields.Char('Street2')
+    zip =  fields.Char('Zip', size=24, change_default=True)
+    city =  fields.Char('City')
+    state_id =  fields.Many2one("res.country.state", 'State', ondelete='restrict')
+    country_id =  fields.Many2one('res.country', 'Country', ondelete='restrict')
+
+
+    active = fields.Boolean('Active', default=True)
 
 
 
 class pit_location_classroom(models.Model):
 
-    _name = "pit.Localion.classroom"
-    _description = "Localion classroom"
+    _name = "pit.location.classroom"
+    _description = "Location classroom"
 
     name = fields.Char('Name')
-    location_id = fields.Many2one('pit.localion','Location')
+    location_id = fields.Many2one('pit.location','Location')
+    available_seats = fields.Integer('Available seats')
 
 

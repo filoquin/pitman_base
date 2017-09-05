@@ -53,6 +53,13 @@ class pit_student(models.Model):
         'Blood Group')
     allergies = fields.Char('Allergies' )
 
+
+    @api.model
+    @api.returns('self', lambda value: value.id)
+    def create(self, vals):
+        vals['is_student'] = True
+        return super(pit_student, self).create(vals)
+
     @api.multi
     def on_change_company_type(self, company_type):
         return {'value': {'is_company': company_type == 'company'}}

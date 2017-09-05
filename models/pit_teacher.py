@@ -52,6 +52,11 @@ class pit_teacher(models.Model):
         'Blood Group')
     allergies = fields.Char('Allergies' )
 
+    @api.model
+    @api.returns('self', lambda value: value.id)
+    def create(self, vals):
+        vals['is_teacher'] = True
+        return super(pit_teacher, self).create(vals)
 
     @api.multi
     def onchange_parent_id(self, parent_id):

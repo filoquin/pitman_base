@@ -105,7 +105,15 @@
                     <page string="family">
               
                         <group>
-          <field name="family_ids"/>
+          <field name="family_ids">
+                             <tree editable="bottom" >
+                                <field name="relation" />
+                                <field name="partner_id" />
+                                <field name="phone" />
+
+
+                            </tree>
+         </field>
             </group>
 
                     </page>

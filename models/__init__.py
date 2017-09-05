@@ -22,3 +22,4 @@
 import pit_student
 import pit_teacher
 import pit_location
+import pit_school

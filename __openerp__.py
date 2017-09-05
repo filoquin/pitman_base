@@ -41,6 +41,11 @@
         'views/pitman.xml',
         'views/pit_student.xml',
         'views/pit_teacher.xml',
+        'views/pit_location.xml',
+        'views/pit_school.xml',
+        'views/pit_course.xml',
+        'views/pit_group.xml',
+        
     ],
     'demo': [
     ],
