@@ -27,9 +27,10 @@
 
                     <group col="4">
      
+                        <field name="course_id" collspan="4"/>
+
                         <field name="code"/>
                         <field name="name"/>
-                        <field name="course_id"/>
                         <field name="date_from"/>
                         <field name="date_to"/>
                         <field name="teacher_id"/>
@@ -81,7 +82,7 @@
             <field name="model">pit.school.course.group</field>
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
-                <search string="Course">
+                <search string="Group">
                     <field name="name"/>
 
                 </search>
@@ -89,14 +90,14 @@
         </record>
 
         <record id="pit_school_course_group_action" model="ir.actions.act_window">
-            <field name="name">Course</field>
+            <field name="name">Group</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">pit.school.course.group</field>
             <field name="view_type">form</field>
             <field name="view_id" ref="view_pit_school_course_group_tree" />
         </record>
 
-        <menuitem id="menu_pit_school_course_group" action="pit_school_course_group_action" name="Grups" parent="menu_pit_config_root" sequence="30"/>
+        <menuitem id="menu_pit_school_course_group" action="pit_school_course_group_action" name="Grup" parent="menu_pit_config_courses" sequence="30"/>
 
 
 

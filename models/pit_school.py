@@ -91,7 +91,7 @@ class pit_school_course_group(models.Model):
     date_from = fields.Date('from')
     date_to = fields.Date('to')
     teacher_id = fields.Many2one('pit.teacher','Teacher')
-    company_id = fields.Many2one('res.company', 'Company', select=1),
+    company_id = fields.Many2one('res.company', 'Company', select=1)
     location_id = fields.Many2one('pit.location','Location')
     calendar_ids = fields.One2many('pit.school.course.calendar','group_id',string='Calendar')
 
@@ -100,10 +100,15 @@ class pit_school_course_group(models.Model):
     active = fields.Boolean('Active', default=True)
 
 
-    @api.depend('course_id')
+    @api.depends('course_id')
     @api.onchange('course_id')
     def set_products(self):
-        self.product_ids= self.course_id.product_ids
+        self.product_ids=False
+        products =[]
+        for product_id in self.course_id.product_ids :
+            products.append((0,0,{'quant':product_id.quant,'product_id':product_id.product_id,'product_type':product_id.product_type}))
+        self.name = self.course_id.name
+        self.product_ids= products
 
 
 

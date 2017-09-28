@@ -45,6 +45,9 @@
         'views/pit_school.xml',
         'views/pit_course.xml',
         'views/pit_group.xml',
+        'views/pit_enrollment.xml',
+        'views/pit_fee.xml',
+        'views/pit_do_enrollment.xml',
         
     ],
     'demo': [

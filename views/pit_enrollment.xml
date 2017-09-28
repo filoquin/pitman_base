@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_pit_enrollment_tree" model="ir.ui.view">
+            <field name="name">pit.enrollment.tree</field>
+            <field name="model">pit.enrollment</field>
+            <field name="arch" type="xml">
+                <tree string="inscripcion">
+                    <field name="name"/>
+                    <field name="enrollment_date"/>
+                    <field name="student_id"/>
+                    <field name="group_id"/>
+                    <field name="state"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_pit_enrollment" model="ir.ui.view">
+            <field name="name">Group</field>
+            <field name="model">pit.enrollment</field>
+            <field name="arch" type="xml">
+                <form string="Group">
+                    <header>
+
+                     <button class="oe_inline oe_stat_button" type="object"  name="do_enrollment"  string="enrollment" states="draft"></button>
+
+
+
+                        <field name="state" widget="statusbar"/>
+
+                    </header>
+                    <group col="4">
+                    <field name="name"/>
+                    <field name="student_id"/>
+                    <field name="group_id"/>
+                    <field name="enrollment_date"/>
+                    </group>
+                    
+                    <group col="4" string="invoice">
+                    <field name="partner_id"/>
+                    <field name="fees"/>
+                    <field name="pricelist_id"/>
+                    
+                    </group>
+
+
+
+
+
+                </form>
+            </field>
+        </record>
+
+        <record id="pit_enrollment_view_search" model="ir.ui.view">
+            <field name="name">pit.enrollment.search</field>
+            <field name="model">pit.enrollment</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Course">
+                    <field name="name"/>
+                    <field name="state"/>
+                    <field name="student_id"/>
+                    <field name="group_id"/>
+
+                </search>
+            </field>
+        </record>
+
+        <record id="pit_enrollment_action" model="ir.actions.act_window">
+            <field name="name">enrollments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pit.enrollment</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_pit_enrollment_tree" />
+        </record>
+
+        <menuitem id="menu_pit_enrollment" action="pit_enrollment_action" name="Enrollment" parent="menu_pit_config_root" sequence="30"/>
+
+
+
+
+    </data>
+</openerp>
