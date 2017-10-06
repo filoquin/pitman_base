@@ -69,8 +69,9 @@
             <field name="view_id" ref="view_pit_fee_tree" />
         </record>
 
-        <menuitem id="menu_pit_fee" action=">pit_fee_action" name="Fees" parent="menu_pit_config_root" sequence="30"/>
+        <menuitem id="menu_st_pit_fee" action=">pit_fee_action" name="Fees" parent="menu_pit_student_root" sequence="30"/>
 
+        <menuitem id="menu_pit_fee" action=">pit_fee_action" name="Fees" parent="menu_pit_config_root" sequence="30"/>
 
 
 

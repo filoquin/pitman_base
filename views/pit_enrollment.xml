@@ -75,7 +75,9 @@
             <field name="view_id" ref="view_pit_enrollment_tree" />
         </record>
 
+        <menuitem id="menu_pitst_enrollment" action="pit_enrollment_action" name="Enrollment" parent="menu_pit_student_root" sequence="30"/>
         <menuitem id="menu_pit_enrollment" action="pit_enrollment_action" name="Enrollment" parent="menu_pit_config_root" sequence="30"/>
+
 
 
 

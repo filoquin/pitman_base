@@ -163,7 +163,7 @@
 
 
 
-        <menuitem id="menu_pit_student_root" action="action_pit_student" parent="menu_pit_root"  name="Student" sequence="15" />
+        <menuitem id="menu_pit_student_root" action="action_pit_student" parent="menu_pit_coursemenu_root"  name="Student" sequence="15" />
         <menuitem id="menu_pit_student" action="action_pit_student" name="Students" parent="menu_pit_student_root" sequence="12"/>
     </data>
 </openerp>

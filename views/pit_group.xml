@@ -100,6 +100,8 @@
         <menuitem id="menu_pit_school_course_group" action="pit_school_course_group_action" name="Grup" parent="menu_pit_config_courses" sequence="30"/>
 
 
+        <menuitem id="menu_pitst_school_course_group" action="pit_school_course_group_action" name="Grup" parent="menu_pit_student_root" sequence="30"/>
+
 
 
     </data>
