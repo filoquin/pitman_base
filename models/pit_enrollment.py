@@ -51,6 +51,13 @@ class pit_enrollment(models.Model):
   
     name = fields.Char('Name',compute="_compute_name")
 
+
+    @api.model
+    def _default_date(self):
+        return fields.Date.context_today(self)
+
+
+
     @api.depends('student_id','group_id')
     @api.one
     def _compute_name(self):

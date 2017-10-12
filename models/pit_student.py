@@ -60,6 +60,10 @@ class pit_student(models.Model):
         vals['is_student'] = True
         return super(pit_student, self).create(vals)
 
+
+    ## agrego compatibilidad con herencia de res_partner de estas funciones que no
+    ## son heredadas 
+
     @api.multi
     def on_change_company_type(self, company_type):
         return {'value': {'is_company': company_type == 'company'}}
@@ -68,6 +72,12 @@ class pit_student(models.Model):
     @api.multi
     def onchange_parent_id(self, parent_id):
         pass
+    @api.multi
+    def onchange_state(self, state_id):
+        if state_id:
+            state = self.env['res.country.state'].browse(state_id)
+            return {'value': {'country_id': state.country_id.id}}
+        return {'value': {}}
 
 class pit_student_family(models.Model):
 

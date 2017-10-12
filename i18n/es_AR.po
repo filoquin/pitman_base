@@ -1,0 +1,1564 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pitman_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20170926\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-12 12:57+0000\n"
+"PO-Revision-Date: 2017-10-12 12:57+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pitman_base
+#: selection:pit.student,blood_group:0
+#: selection:pit.teacher,blood_group:0
+msgid "A+ve"
+msgstr "A+ve"
+
+#. module: pitman_base
+#: selection:pit.student,blood_group:0
+#: selection:pit.teacher,blood_group:0
+msgid "A-ve"
+msgstr "A-ve"
+
+#. module: pitman_base
+#: selection:pit.student,blood_group:0
+#: selection:pit.teacher,blood_group:0
+msgid "AB+ve"
+msgstr "AB+ve"
+
+#. module: pitman_base
+#: selection:pit.student,blood_group:0
+#: selection:pit.teacher,blood_group:0
+msgid "AB-ve"
+msgstr "AB-ve"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_property_account_payable_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_property_account_payable_id
+msgid "Account Payable"
+msgstr "Cuenta a pagar"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_property_account_receivable_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_property_account_receivable_id
+msgid "Account Receivable"
+msgstr "Cuenta a cobrar"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_message_needaction
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_message_needaction
+msgid "Action Needed"
+msgstr "Necesaria acción"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_active
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_active
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_active
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_active
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_active
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_location
+msgid "Address"
+msgstr "Dirección"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_type
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_type
+msgid "Address Type"
+msgstr "Tipo de dirección"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_allergies
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_allergies
+msgid "Allergies"
+msgstr "Allergia"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom_available_seats
+msgid "Available seats"
+msgstr "Asientos"
+
+#. module: pitman_base
+#: selection:pit.student,blood_group:0
+#: selection:pit.teacher,blood_group:0
+msgid "B+ve"
+msgstr "B+ve"
+
+#. module: pitman_base
+#: selection:pit.student,blood_group:0
+#: selection:pit.teacher,blood_group:0
+msgid "B-ve"
+msgstr "B-ve"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_bank_account_count
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_bank_account_count
+msgid "Bank"
+msgstr "Banco"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_bank_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_bank_ids
+msgid "Banks"
+msgstr "Bancos"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_barcode
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_barcode
+msgid "Barcode"
+msgstr "Código de barras"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_birthdate
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_birthdate
+msgid "Birthdate"
+msgstr "Fecha de nacimiento"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_blood_group
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_blood_group
+msgid "Blood Group"
+msgstr "Grupo sanguineo"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_calendar_ids
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course_group
+msgid "Calendar"
+msgstr "Calendario"
+
+#. module: pitman_base
+#: model:ir.actions.act_window,name:pitman_base.pit_school_action
+msgid "Carrer"
+msgstr "Carrera"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_channel_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_channel_ids
+msgid "Channels"
+msgstr "Canales"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_is_company
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "Marque esta casilla si el contacto es una compañía. En caso contrario, será una persona."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_customer
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_customer
+msgid "Check this box if this contact is a customer."
+msgstr "Marque esta casilla si el contacto es un cliente."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_supplier
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_supplier
+msgid "Check this box if this contact is a vendor. If it's not checked, purchase people will not see it when encoding a purchase order."
+msgstr "Marque esta casilla si el contacto es un proveedor. Si no está marcada, el equipo de compras no lo verá cuando esté haciendo una orden de compra."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_employee
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_employee
+msgid "Check this box if this contact is an Employee."
+msgstr "Marque si el contacto es un empleado"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_city
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_city
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_city
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_location
+msgid "City"
+msgstr "Ciudad"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_classroom_id
+msgid "Classroom"
+msgstr "Aula"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_code
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_code
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_code
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_code
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_code
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_code
+msgid "Code"
+msgstr "Código"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_color
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_color
+msgid "Color Index"
+msgstr "Índice de colores"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_commercial_partner_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Entidad comercial"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_ref_company_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_ref_company_ids
+msgid "Companies that refers to partner"
+msgstr "Compañías que se refieren a la empresa"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_company_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_company_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_company_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_company_type
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_company_type
+msgid "Company Type"
+msgstr "Tipo de compañía"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_contact_address
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_contact_address
+msgid "Complete Address"
+msgstr "Dirección completa"
+
+#. module: pitman_base
+#: model:ir.ui.menu,name:pitman_base.menu_pit_config_root
+msgid "Config"
+msgstr "Configuración"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_child_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_child_ids
+msgid "Contacts"
+msgstr "Contactos"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_contract_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_contracts_count
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_contract_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_contracts_count
+msgid "Contracts"
+msgstr "Contratos"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_country_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_country_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_country_id
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_location
+msgid "Country"
+msgstr "País"
+
+#. module: pitman_base
+#: model:ir.actions.act_window,name:pitman_base.pit_school_course_action
+#: model:ir.model,name:pitman_base.model_pit_school_course
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_course_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_course_id
+#: model:ir.ui.view,arch_db:pitman_base.>pit_fee_view_search
+#: model:ir.ui.view,arch_db:pitman_base.pit_enrollment_view_search
+#: model:ir.ui.view,arch_db:pitman_base.pit_school_course_view_search
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course
+msgid "Course"
+msgstr "Curso"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_school_course_calendar
+msgid "Course calendar"
+msgstr "Calendario del curso"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_school_course_group
+msgid "Course group"
+msgstr "Cursada"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_course_product
+msgid "Course product"
+msgstr "Productos"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_school_workload
+msgid "Course workload"
+msgstr "Carga horaria"
+
+#. module: pitman_base
+#: model:ir.ui.menu,name:pitman_base.menu_pit_config_courses
+#: model:ir.ui.menu,name:pitman_base.menu_pit_coursemenu_root
+#: model:ir.ui.menu,name:pitman_base.menu_pit_school_course
+msgid "Courses"
+msgstr "Cursos"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_course_product_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_group_product_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_workload_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_create_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_course_product_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_group_product_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_workload_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_create_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_credit_limit
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_credit_limit
+msgid "Credit Limit"
+msgstr "Crédito concedido"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_currency_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_ids
+msgid "Curses"
+msgstr "Cursos"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_property_payment_term_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_property_payment_term_id
+msgid "Customer Payment Term"
+msgstr "Plazo de pago de cliente"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_enrollment_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_date_due
+msgid "Date due"
+msgstr "Date due"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_date_from
+msgid "Date from"
+msgstr "Date from"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_message_last_post
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr "Fecha del último mensaje publicado en el registro."
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_dayofweek
+msgid "Day of Week"
+msgstr "Día de la semana"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_course_product_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_group_product_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_workload_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_display_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_do_enrollment
+msgid "Do"
+msgstr "Do"
+
+#. module: pitman_base
+#: selection:pit.enrollment,state:0
+msgid "Draft"
+msgstr "Draft"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_email
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_email
+msgid "Email"
+msgstr "Correo electrónico"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_notify_email
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_notify_email
+msgid "Email Messages and Notifications"
+msgstr "Enviar mensajes y notificaciones"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_emergency_contact
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_emergency_contact
+msgid "Emergency Contact"
+msgstr "Emergency Contact"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_employee
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_date_to
+msgid "End Date"
+msgstr "Fecha final"
+
+#. module: pitman_base
+#: model:ir.ui.menu,name:pitman_base.menu_pit_enrollment
+#: model:ir.ui.menu,name:pitman_base.menu_pitst_enrollment
+msgid "Enrollment"
+msgstr "Inscripción"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_ids
+msgid "Family"
+msgstr "Familia"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_fax
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_fax
+msgid "Fax"
+msgstr "Fax"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_fee_product
+msgid "Fee product"
+msgstr "Productos"
+
+#. module: pitman_base
+#: model:ir.ui.menu,name:pitman_base.menu_pit_fee
+#: model:ir.ui.menu,name:pitman_base.menu_st_pit_fee
+msgid "Fees"
+msgstr "Cuotas"
+
+#. module: pitman_base
+#: selection:pit.student,gender:0
+#: selection:pit.teacher,gender:0
+msgid "Female"
+msgstr "Femenino"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_property_account_position_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_property_account_position_id
+msgid "Fiscal Position"
+msgstr "Posición fiscal"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_message_follower_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_message_channel_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_message_partner_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Empresas)"
+
+#. module: pitman_base
+#: selection:pit.school.course.calendar,dayofweek:0
+msgid "Friday"
+msgstr "Viernes"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_gender
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_gender
+msgid "Gender"
+msgstr "Sexo"
+
+#. module: pitman_base
+#: model:ir.actions.act_window,name:pitman_base.pit_school_course_group_action
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_group_id
+#: model:ir.ui.view,arch_db:pitman_base.pit_school_course_group_view_search
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_do_enrollment
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_enrollment
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course_group
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course_group_tree
+msgid "Group"
+msgstr "Grupo"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.pit_location_view_search
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: pitman_base
+#: model:ir.ui.menu,name:pitman_base.menu_pit_school_course_group
+#: model:ir.ui.menu,name:pitman_base.menu_pitst_school_course_group
+msgid "Grup"
+msgstr "Grupo"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_has_unreconciled_entries
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_has_unreconciled_entries
+msgid "Has unreconciled entries"
+msgstr "Contiene entradas irreconciliadas"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_course_product_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_group_product_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_workload_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_id
+msgid "ID"
+msgstr "ID"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_im_status
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_im_status
+msgid "IM Status"
+msgstr "Estado del chat"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_message_unread
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_message_needaction
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_opt_out
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_opt_out
+msgid "If opt-out is checked, this contact has refused to receive emails for mass mailing and marketing campaign. Filter 'Available for Mass Mailing' allows users to filter the partners when performing mass mailing."
+msgstr "Si 'No acepta mensajes' está marcado, este contacto ha rehusado recibir correos electrónicos de envíos masivos y campañas de marketing. El filtro 'Disponible para envíos masivos' permite a los usuarios filtrar a las empresas cuando se realicen envíos masivos."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_lang
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_lang
+msgid "If the selected language is loaded in the system, all documents related to this contact will be printed in this language. If not, it will be English."
+msgstr "Si el idioma seleccionado está cargado en el sistema, todos los documentos relacionados con el contacto se imprimirán en este idioma. Si no, se imprimirán en inglés."
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_image
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_image
+msgid "Image"
+msgstr "Imagen"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_ref
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_ref
+msgid "Internal Reference"
+msgstr "Referencia interna"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_invoice_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_invoice_ids
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_message_is_follower
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_is_company
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_is_company
+msgid "Is a Company"
+msgstr "Es una compañia"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_customer
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_customer
+msgid "Is a Customer"
+msgstr "Es Cliente"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_supplier
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_supplier
+msgid "Is a Vendor"
+msgstr "Es un Proveedor"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_function
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_function
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_issued_total
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_journal_item_count
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_issued_total
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_journal_item_count
+msgid "Journal Items"
+msgstr "Apuntes contables"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_lang
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_lang
+msgid "Language"
+msgstr "Idioma"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_message_last_post
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_message_last_post
+msgid "Last Message Date"
+msgstr "Fecha del último mensaje"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_course_product___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_group_product___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_workload___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_family___last_update
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher___last_update
+msgid "Last Modified on"
+msgstr "Última Modifiación en"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_course_product_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_group_product_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_workload_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_write_uid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_course_product_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_group_product_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_workload_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_write_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_last_time_entries_checked
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_last_time_entries_checked
+msgid "Last time the invoices & payments matching was performed for this partner. It is set either if there's not at least an unreconciled debit and an unreconciled credit or if you click the \"Done\" button."
+msgstr "Última vez que se conciliaros facturas y pagos de este asociado. Se configura incluso si no hay ningún débito o crédito por conciliar, o si pulsa el botón \"Hecho\"."
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_last_time_entries_checked
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr "Fecha de la última conciliación de facturas y pagos"
+
+#. module: pitman_base
+#: model:ir.actions.act_window,name:pitman_base.pit_location_action
+#: model:ir.model,name:pitman_base.model_pit_location
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom_location_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_location_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_location_id
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_location
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_location_classroom
+msgid "Location classroom"
+msgstr "Aulas"
+
+#. module: pitman_base
+#: model:ir.ui.menu,name:pitman_base.menu_pit_location
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_location_tree
+msgid "Locations"
+msgstr "Ubicaciones"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_do_enrollment
+msgid "Make enrollment"
+msgstr "Make enrollment"
+
+#. module: pitman_base
+#: selection:pit.student,gender:0
+#: selection:pit.teacher,gender:0
+msgid "Male"
+msgstr "Masculino"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_image_medium
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_image_medium
+msgid "Medium-sized image"
+msgstr "Imagen mediana"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_image_medium
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_image_medium
+msgid "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Imagen mediana de este contacto. Se redimensiona automáticamente a 128x128 px, con el ratio de aspecto preservado. Se usa este campo en las vistas formulario y en algunas vistas kanban."
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_message_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_mobile
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_mobile
+msgid "Mobile"
+msgstr "Móvil"
+
+#. module: pitman_base
+#: selection:pit.school.course.calendar,dayofweek:0
+msgid "Monday"
+msgstr "Lunes"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_comment
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_comment
+msgid "Notes"
+msgstr "Notas"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_message_needaction_counter
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_message_needaction_counter
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_message_unread_counter
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leidos"
+
+#. module: pitman_base
+#: selection:pit.student,blood_group:0
+#: selection:pit.teacher,blood_group:0
+msgid "O+ve"
+msgstr "O+ve"
+
+#. module: pitman_base
+#: selection:pit.student,blood_group:0
+#: selection:pit.teacher,blood_group:0
+msgid "O-ve"
+msgstr "O-ve"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_opt_out
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_opt_out
+msgid "Opt-Out"
+msgstr "No acepta recibir mensajes"
+
+#. module: pitman_base
+#: selection:pit.student,gender:0
+#: selection:pit.teacher,gender:0
+msgid "Other"
+msgstr "Otro"
+
+#. module: pitman_base
+#: selection:pit.group.product,product_type:0
+msgid "Overdue"
+msgstr "Atrasado"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_parent_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_parent_name
+msgid "Parent name"
+msgstr "Nombre del padre"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_partner_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_partner_id
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_debit_limit
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_debit_limit
+msgid "Payable Limit"
+msgstr "Límite a pagar"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_payment_day
+msgid "Payment Date"
+msgstr "Fecha de pago"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_partner_id
+msgid "Person"
+msgstr "Persona"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_phone
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_phone
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: pitman_base
+#: model:ir.ui.menu,name:pitman_base.menu_pit_root
+msgid "Pitman"
+msgstr "Pitman"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_notify_email
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_notify_email
+msgid "Policy to receive emails for new messages pushed to your personal Inbox:\n"
+"- Never: no emails are sent\n"
+"- All Messages: for every notification you receive in your Inbox"
+msgstr "Política para recibir correos electrónicos para los nuevos mensajes insertados en su bandeja de entrada personal\n"
+"- Nunca: No se enviará ningún correo\n"
+"- Todos los mensajes: Se enviará un correo para cada notificación que reciba en su bandeja de entrada"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product_product_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_group_product_product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_course_product_quant
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product_quant
+#: model:ir.model.fields,field_description:pitman_base.field_pit_group_product_quant
+msgid "Quant"
+msgstr "Cant"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_parent_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_parent_id
+msgid "Related Company"
+msgstr "Empresa relacionada"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_property_product_pricelist
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_property_product_pricelist
+msgid "Sale Pricelist"
+msgstr "Tarifa de venta"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_team_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_team_id
+msgid "Sales Team"
+msgstr "Equipo de ventas"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_user_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_user_id
+msgid "Salesperson"
+msgstr "Comercial"
+
+#. module: pitman_base
+#: selection:pit.school.course.calendar,dayofweek:0
+msgid "Saturday"
+msgstr "Sábado"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_use_parent_address
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_use_parent_address
+msgid "Select this if you want to set company's address information  for this contact"
+msgstr "Seleccione esto si quiere establecer la información de la dirección de la compañía para este contacto"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_signup_expiration
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_signup_expiration
+msgid "Signup Expiration"
+msgstr "Expiración del ingreso"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_signup_token
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_signup_token
+msgid "Signup Token"
+msgstr "Palabra de ingreso"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_signup_type
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_signup_type
+msgid "Signup Token Type"
+msgstr "Tipo de la palabra de ingreso"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_signup_valid
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_signup_valid
+msgid "Signup Token is Valid"
+msgstr "La palabra de ingreso es válida"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_signup_url
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_signup_url
+msgid "Signup URL"
+msgstr "URL de ingreso"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_image_small
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_image_small
+msgid "Small-sized image"
+msgstr "Imagen de tamaño pequeño"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_image_small
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_image_small
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Imagen de tamaño pequeño de este contacto. Se redimensiona automáticamente a 64x64 px, con el ratio de aspecto preservado. Use este campo donde se requiera una imagen pequeña."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_school_course_calendar_hour_from
+msgid "Start and End time of class."
+msgstr "Hora de inicio y finalizacion de la clase."
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_date_from
+msgid "Starting Date"
+msgstr "Fecha de inicio"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_state
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_state
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_state_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_state_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_state_id
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_location
+msgid "State"
+msgstr "Estado"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_street
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_street
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_street
+msgid "Street"
+msgstr "Calle"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_location
+msgid "Street 2..."
+msgstr "Calle..."
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_location
+msgid "Street..."
+msgstr "Calle..."
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_street2
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_street2
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_street2
+msgid "Street2"
+msgstr "Calle2"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_student_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_student_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_student_id
+#: model:ir.ui.menu,name:pitman_base.menu_pit_student_root
+#: model:ir.ui.view,arch_db:pitman_base.pit_student_form_view
+msgid "Student"
+msgstr "Alumno"
+
+#. module: pitman_base
+#: model:ir.actions.act_window,name:pitman_base.action_pit_student
+#: model:ir.ui.menu,name:pitman_base.menu_pit_student
+msgid "Students"
+msgstr "Alumnos"
+
+#. module: pitman_base
+#: selection:pit.school.course.calendar,dayofweek:0
+msgid "Sunday"
+msgstr "Domingo"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_vat
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_vat
+msgid "TIN"
+msgstr "NIF"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_category_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_category_id
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_vat
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_vat
+msgid "Tax Identification Number. Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+msgstr "Número de identificación fiscal. Llénelo si la compañía esta sujeta a impuestos. Usado por algunos documentos legales."
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_teacher_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_teacher_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_teacher_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_teacher_id
+msgid "Teacher"
+msgstr "Profesor"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_company_type
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_company_type
+msgid "Technical field, used only to display a boolean using a radio button. As for Odoo v9 RadioButton cannot be used on boolean fields, this one serves as interface. Due to the old API limitations with interface function field, we implement it by hand instead of a true function field. When migrating to the new API the code should be simplified. Changing thecompany_type of a company contact into a company will not displaythis contact as a company contact but as a standalone company."
+msgstr "Technical field, used only to display a boolean using a radio button. As for Odoo v9 RadioButton cannot be used on boolean fields, this one serves as interface. Due to the old API limitations with interface function field, we implement it by hand instead of a true function field. When migrating to the new API the code should be simplified. Changing thecompany_type of a company contact into a company will not displaythis contact as a company contact but as a standalone company."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_property_account_position_id
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_property_account_position_id
+msgid "The fiscal position will determine taxes and accounts used for the partner."
+msgstr "La posición fiscal determinará los impuestos y cuentas utilizados por el asociado."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_user_id
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_user_id
+msgid "The internal user that is in charge of communicating with this contact if any."
+msgstr "El usuario interno encargado de comunicarse con este contacto si lo hubiese."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_has_unreconciled_entries
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_has_unreconciled_entries
+msgid "The partner has at least one unreconciled debit and credit since last time the invoices & payments matching was performed."
+msgstr "El asociado tiene al menos un débito o crédito no conciliado desde la última vez que se realizó la conciliación de facturas y pagos."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_tz
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_tz
+msgid "The partner's timezone, used to output proper date and time values inside printed reports. It is important to set a value for this field. You should use the same timezone that is otherwise used to pick and render date and time values: your computer's timezone."
+msgstr "Zona horaria de la empresa, usada para mostrar la fecha y hora adecuadas en los informes. Es importante establecer un valor para este campo. Debería usar la misma zona horaria que se coge en cualquier caso para mostrar los valores de fecha y hora: la zona horaria de su ordenador."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_property_account_payable_id
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_property_account_payable_id
+msgid "This account will be used instead of the default one as the payable account for the current partner"
+msgstr "Esta cuenta se utilizará en lugar de la cuenta por defecto como la cuenta pendiente de pago del asociado actual."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_property_account_receivable_id
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_property_account_receivable_id
+msgid "This account will be used instead of the default one as the receivable account for the current partner"
+msgstr "Esta cuenta se utilizará en lugar de la cuenta por defecto como la cuenta pendiente de cobro del asociado actual."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_image
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_image
+msgid "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+msgstr "Este campo contiene la imagen utilizada como avatar para este contacto, limitada a 1024x1024 px"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_property_supplier_payment_term_id
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_property_supplier_payment_term_id
+msgid "This payment term will be used instead of the default one for purchase orders and vendor bills"
+msgstr "Se utilizará este plazo de pago, en lugar del predeterminado, para los pedidos de compra y las facturas de proveedor."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_property_payment_term_id
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_property_payment_term_id
+msgid "This payment term will be used instead of the default one for sale orders and customer invoices"
+msgstr "Se utilizará este plazo de pago, en lugar del predeterminado, para los pedidos de venta y facturas de clientes."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_property_product_pricelist
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_property_product_pricelist
+msgid "This pricelist will be used, instead of the default one, for sales to the current partner"
+msgstr "Esta tarifa se utilizará, en lugar de la por defecto, para las ventas de la empresa actual."
+
+#. module: pitman_base
+#: selection:pit.school.course.calendar,dayofweek:0
+msgid "Thursday"
+msgstr "Jueves"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_tz
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_tz
+msgid "Timezone"
+msgstr "Zona horaria"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_tz_offset
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_tz_offset
+msgid "Timezone offset"
+msgstr "Compensación zona horaria"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_title
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_title
+msgid "Title"
+msgstr "Título"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_total_fee
+msgid "Total Fee"
+msgstr "Total Fee"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_total_invoiced
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_total_invoiced
+msgid "Total Invoiced"
+msgstr "Total facturado"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_debit
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_debit
+msgid "Total Payable"
+msgstr "Total a pagar"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_credit
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_credit
+msgid "Total Receivable"
+msgstr "Total a cobrar"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_credit
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_credit
+msgid "Total amount this customer owes you."
+msgstr "Importe total que le debe el cliente."
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_debit
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_debit
+msgid "Total amount you have to pay to this vendor."
+msgstr "Importe total a pagar a este proveedor."
+
+#. module: pitman_base
+#: selection:pit.school.course.calendar,dayofweek:0
+msgid "Tuesday"
+msgstr "Martes"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_message_unread
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_message_unread
+msgid "Unread Messages"
+msgstr "Mensajes sin leer"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_message_unread_counter
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leidos"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_use_parent_address
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_use_parent_address
+msgid "Use Company Address"
+msgstr "Utilizar la dirección de la empresa"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_type
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_type
+msgid "Used to select automatically the right address according to the context in sales and purchases documents."
+msgstr "﻿Utilizado para seleccionar automáticamente la dirección correcta según el contexto en documentos de ventas y compras."
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_user_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_user_ids
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_currency_id
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_currency_id
+msgid "Utility field to express amount currency"
+msgstr "Campo útil para expresar importe en divisa."
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_property_supplier_payment_term_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_property_supplier_payment_term_id
+msgid "Vendor Payment Term"
+msgstr "Plazo de pago de proveedor"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_website
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_website
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_website
+msgid "Website of Partner or Company"
+msgstr "Web de la empresa o de la compañía"
+
+#. module: pitman_base
+#: selection:pit.school.course.calendar,dayofweek:0
+msgid "Wednesday"
+msgstr "Miércoles"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_name
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_workload_workload
+msgid "Workload"
+msgstr "Carga horaria"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_course_product_product_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_workload_ids
+msgid "Workloads"
+msgstr "Cargas"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_location
+msgid "ZIP"
+msgstr "C.P."
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_location_zip
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_zip
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_zip
+msgid "Zip"
+msgstr "C.P."
+
+#. module: pitman_base
+#: selection:pit.enrollment,state:0
+msgid "active"
+msgstr "activo"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_amount
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_pay_amount
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product_amount
+msgid "amount"
+msgstr "Monto"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.pit_student_kanban_view
+#: model:ir.ui.view,arch_db:pitman_base.pit_teacher_kanban_view
+msgid "at"
+msgstr "en"
+
+#. module: pitman_base
+#: selection:pit.enrollment,state:0
+#: selection:pit.fee,state:0
+msgid "cancel"
+msgstr "cancel"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_location
+msgid "classroom"
+msgstr "Aula"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.pit_location_view_search
+msgid "company_id"
+msgstr "Empresa"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school
+msgid "course"
+msgstr "curso"
+
+#. module: pitman_base
+#: model:ir.actions.act_window,name:pitman_base.pit_do_enrollment_action
+msgid "do_enrollments"
+msgstr "Inscribir"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_enrollment
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_enrollment_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_enrollment_id
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_enrollment
+#: selection:pit.fee,product_type:0
+msgid "enrollment"
+msgstr "Inscribir"
+
+#. module: pitman_base
+#: model:ir.actions.act_window,name:pitman_base.pit_enrollment_action
+msgid "enrollments"
+msgstr "Inscripciones"
+
+#. module: pitman_base
+#: selection:pit.course.product,product_type:0
+#: selection:pit.fee,product_type:0
+#: selection:pit.group.product,product_type:0
+msgid "exam"
+msgstr "examem"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.pit_student_form_view
+msgid "family"
+msgstr "familia"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_fee
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product_fee_id
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_fee
+msgid "fee"
+msgstr "Cuota"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_fee
+msgid "fee N"
+msgstr "Cuota N"
+
+#. module: pitman_base
+#: model:ir.actions.act_window,name:pitman_base.>pit_fee_action
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_fees
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_fees
+msgid "fees"
+msgstr "Cuotas"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_hour_from
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_date_from
+msgid "from"
+msgstr "Desde"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_group_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_group_id
+msgid "group"
+msgstr "grupo"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_group_product
+msgid "group product"
+msgstr "productos"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_enrollment_tree
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_fee_tree
+msgid "inscripcion"
+msgstr "inscripcion"
+
+#. module: pitman_base
+#: selection:pit.course.product,product_type:0
+#: selection:pit.group.product,product_type:0
+msgid "inscription"
+msgstr "inscription"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_enrollment
+msgid "invoice"
+msgstr "Factura"
+
+#. module: pitman_base
+#: selection:pit.school.workload,name:0
+msgid "laboratory"
+msgstr "laboratorio"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.pit_location_view_search
+#: model:ir.ui.view,arch_db:pitman_base.pit_school_view_search
+msgid "location"
+msgstr "Ubicacion"
+
+#. module: pitman_base
+#: selection:pit.course.product,product_type:0
+#: selection:pit.fee,product_type:0
+#: selection:pit.group.product,product_type:0
+msgid "mensual"
+msgstr "mensual"
+
+#. module: pitman_base
+#: selection:pit.student.family,relation:0
+msgid "parent"
+msgstr "Padre"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_partner_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_partner_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_partner_id
+msgid "partner"
+msgstr "Cliente"
+
+#. module: pitman_base
+#: selection:pit.fee,state:0
+msgid "pay"
+msgstr "pagar"
+
+#. module: pitman_base
+#: selection:pit.school.workload,name:0
+msgid "practical"
+msgstr "practica"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_pricelist_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_pricelist_id
+msgid "pricelist"
+msgstr "Lista de precios"
+
+#. module: pitman_base
+#: selection:pit.fee,state:0
+msgid "process pay"
+msgstr "En proceso de pago"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_product_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_product_ids
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course_group
+msgid "product"
+msgstr "producto"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_relation
+msgid "relation"
+msgstr "relacion"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_school
+#: model:ir.model.fields,field_description:pitman_base.field_pit_course_product_course_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_group_product_group_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_school_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_workload_course_id
+#: model:ir.ui.menu,name:pitman_base.menu_pit_school
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course_tree
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school_tree
+msgid "school"
+msgstr "escuela"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_student
+#: model:ir.model,name:pitman_base.model_pit_student_family
+#: model:ir.ui.view,arch_db:pitman_base.pit_student_tree
+msgid "student"
+msgstr "estudiante"
+
+#. module: pitman_base
+#: model:ir.model,name:pitman_base.model_pit_teacher
+#: model:ir.ui.menu,name:pitman_base.menu_pit_teacher_root
+#: model:ir.ui.view,arch_db:pitman_base.pit_teacher_form_view
+#: model:ir.ui.view,arch_db:pitman_base.pit_teacher_tree
+msgid "teacher"
+msgstr "Profesor"
+
+#. module: pitman_base
+#: model:ir.actions.act_window,name:pitman_base.action_pit_teacher
+#: model:ir.ui.menu,name:pitman_base.menu_pit_teacher
+msgid "teachers"
+msgstr "Profesores"
+
+#. module: pitman_base
+#: selection:pit.school.workload,name:0
+msgid "tehory"
+msgstr "Teoria"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_hour_to
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_date_to
+msgid "to"
+msgstr "hasta"
+
+#. module: pitman_base
+#: selection:pit.student.family,relation:0
+msgid "tutor"
+msgstr "tutor"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_course_product_product_type
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_product_type
+#: model:ir.model.fields,field_description:pitman_base.field_pit_group_product_product_type
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_workload_name
+msgid "type"
+msgstr "tipo"
+
+#. module: pitman_base
+#: selection:pit.fee,state:0
+msgid "unpaid"
+msgstr "unpago"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course
+msgid "workload"
+msgstr "Carga"
+

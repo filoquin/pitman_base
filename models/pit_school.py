@@ -58,6 +58,17 @@ class pit_school_course(models.Model):
 
     active = fields.Boolean('Active', default=True)
 
+    @api.onchange('name')
+    def set_code(self):
+        if self.name : 
+            code = ''
+            for i in self.name.upper().split():
+                code += i[0]
+
+            self.code = code
+    _sql_constraints = [('name_unique','UNIQUE(name)',"The name must be unique"),
+                        ('code_unique','UNIQUE(code)',"The code must be unique")]
+
 class pit_course_product(models.Model):
 
     _name = "pit.course.product"
@@ -91,24 +102,50 @@ class pit_school_course_group(models.Model):
     date_from = fields.Date('from')
     date_to = fields.Date('to')
     teacher_id = fields.Many2one('pit.teacher','Teacher')
-    company_id = fields.Many2one('res.company', 'Company', select=1)
+    company_id = fields.Many2one('res.company', 'Company')
     location_id = fields.Many2one('pit.location','Location')
     calendar_ids = fields.One2many('pit.school.course.calendar','group_id',string='Calendar')
 
     product_ids = fields.One2many('pit.group.product','group_id',string='product')
+    enrollment_ids = fields.One2many('pit.enrollment','group_id',string='Calendar')
+
 
     active = fields.Boolean('Active', default=True)
 
 
-    @api.depends('course_id')
+    @api.depends('course_id',)
     @api.onchange('course_id')
     def set_products(self):
         self.product_ids=False
         products =[]
         for product_id in self.course_id.product_ids :
             products.append((0,0,{'quant':product_id.quant,'product_id':product_id.product_id,'product_type':product_id.product_type}))
-        self.name = self.course_id.name
         self.product_ids= products
+
+        self.calendar_ids=False
+        calendars =[]
+        for workload_id in self.course_id.workload_ids :
+            calendars.append((0,0,{'name':workload_id.id}))
+        self.calendar_ids= calendars
+
+
+    @api.depends('course_id','location_id',)
+    @api.onchange('location_id')
+    def set_name(self):
+        self.name = "%s %s" %(self.course_id.name , self.location_id.name)
+
+
+
+    @api.onchange('name')
+    def set_code(self):
+        if self.name : 
+            code = ''
+            for i in self.name.upper().split():
+                code += i[0]
+
+            self.code = code
+
+
 
 
 
@@ -120,7 +157,7 @@ class pit_group_product(models.Model):
     quant = fields.Float('Quant')
     product_id = fields.Many2one('product.product',string='Product')
     product_type = fields.Selection([('inscription','inscription'),('mensual','mensual'),('exam','exam'),('overdue','Overdue')],string='type')
-    group_id = fields.Many2one('pit.school.course','school')
+    group_id = fields.Many2one('pit.school.course.group','school')
 
 
 class pit_school_course_calendar(models.Model):
@@ -130,10 +167,10 @@ class pit_school_course_calendar(models.Model):
 
 
     group_id = fields.Many2one('pit.school.course.group','Group')
-    course_id = fields.Many2one('pit.school.course','Course',related='group_id.course_id')
-    location_id = fields.Many2one('pit.location','Location',related='group_id.location_id')
+    #course_id = fields.Many2one('pit.school.course','Course',store=True,related='group_id.course_id')
+    #location_id = fields.Many2one('pit.location','Location',store=True,related='group_id.location_id')
 
-    name = fields.Many2one('pit.school.workload','Workload' ,domain="[('course_id','=',course_id)]")
+    name = fields.Many2one('pit.school.workload','Workload' )
     dayofweek = fields.Selection([('0','Monday'),('1','Tuesday'),('2','Wednesday'),('3','Thursday'),('4','Friday'),('5','Saturday'),('6','Sunday')], 'Day of Week',default=0, required=True, select=True)
     date_from = fields.Date('Starting Date')
     date_to = fields.Date('End Date')

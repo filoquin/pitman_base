@@ -27,21 +27,40 @@
 
                     <group col="4">
      
-                        <field name="course_id" collspan="4"/>
+                        <field name="course_id" />
+                        <field name="location_id"/>
+                        <field name="name" collspan="4"/>
 
                         <field name="code"/>
-                        <field name="name"/>
                         <field name="date_from"/>
                         <field name="date_to"/>
                         <field name="teacher_id"/>
-                        <field name="location_id"/>
+                        <field name="company_id"/>
+
                         <field name="active"/>
 
 
                     </group>
-                    
-                    <group string="product">
+                    <notebook colspan="4">
 
+                    <page string="enrolment">
+
+                        <span>
+                            <field name="enrollment_ids" >
+                                <tree>
+                                        <field name="name"/>
+                                        <field name="state"/>
+                                        <field name="student_id"/>
+                                </tree>
+                            </field>
+                        </span>
+
+                    </page>
+
+
+                        <page string="product">
+
+                    <span>
                         <field name="product_ids" >
                             <tree editable="bottom" >
                                 <field name="quant"/>
@@ -50,28 +69,31 @@
 
                             </tree>
                         </field>
+                    </span>
 
-                    </group>
+                    </page>
 
 
-                    <group string="Calendar">
+                    <page string="Calendar">
+                    <span>
+
                         <field name="calendar_ids" >
                             <tree editable="bottom" >
-                                <field name="location_id" invisible="True"/>
-                                <field name="course_id" invisible="True"/>
-                                <field name="name" />
+                                <field name="name" domain="[('course_id','=',parent.course_id)]" />
                                 <field name="dayofweek"/>
                                 <field name="hour_from" widget="float_time"/>
                                 <field name="hour_to" widget="float_time"/>
                                 <field name="teacher_id"/>
-                                <field name="classroom_id"/>
+                                <field name="classroom_id" domain="[('location_id','=',parent.location_id)]"/>
                                 <field name="date_from"/>
                                 <field name="date_to"/>
 
                             </tree>
                         </field>
 
-                    </group>
+                    </span>
+                    </page>
+                    </notebook>
 
                 </form>
             </field>
@@ -85,6 +107,8 @@
                 <search string="Group">
                     <field name="name"/>
 
+                    <filter string="Actual" name="actual" domain="[('date_from','&lt;=',time.strftime('%%Y-%%m-%%d')),('date_to','&gt;=',time.strftime('%%Y-%%m-%%d'))]" context="{}" />
+
                 </search>
             </field>
         </record>
@@ -95,6 +119,7 @@
             <field name="res_model">pit.school.course.group</field>
             <field name="view_type">form</field>
             <field name="view_id" ref="view_pit_school_course_group_tree" />
+            <field name="context">{'search_default_actual':1}</field>
         </record>
 
         <menuitem id="menu_pit_school_course_group" action="pit_school_course_group_action" name="Grup" parent="menu_pit_config_courses" sequence="30"/>

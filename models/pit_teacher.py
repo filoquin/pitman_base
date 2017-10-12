@@ -58,6 +58,14 @@ class pit_teacher(models.Model):
         vals['is_teacher'] = True
         return super(pit_teacher, self).create(vals)
 
+    ## agrego compatibilidad con herencia de res_partner de estas funciones que no
+    ## son heredadas 
     @api.multi
     def onchange_parent_id(self, parent_id):
         pass
+    @api.multi
+    def onchange_state(self, state_id):
+        if state_id:
+            state = self.env['res.country.state'].browse(state_id)
+            return {'value': {'country_id': state.country_id.id}}
+        return {'value': {}}
