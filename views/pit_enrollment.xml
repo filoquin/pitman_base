@@ -60,6 +60,10 @@
                     <field name="student_id"/>
                     <field name="group_id"/>
 
+                    <filter string="unpaid" name="unpaid" domain="[('date_from','&lt;=',time.strftime('%%Y-%%m-%%d')),('date_to','&gt;=',time.strftime('%%Y-%%m-%%d'))]" context="{}" />
+
+
+
                 </search>
             </field>
         </record>
@@ -72,6 +76,11 @@
             <field name="view_id" ref="view_pit_enrollment_tree" />
 
         </record>
+
+
+
+     
+
 
         <menuitem id="menu_pitst_enrollment" action="pit_enrollment_action" name="Enrollment" parent="menu_pit_student_root" sequence="30"/>
         <menuitem id="menu_pit_enrollment" action="pit_enrollment_action" name="Enrollment" parent="menu_pit_config_root" sequence="30"/>

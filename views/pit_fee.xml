@@ -50,18 +50,25 @@
             <field name="model">pit.fee</field>
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
-                <search string="Course">
-                     <field name="fee"/>
+                <search string="Fees">
+                    <field name="fee"/>
                     <field name="total_fee"/>
                     <field name="enrollment_id"/>
                     <field name="partner_id"/>
                     <field name="product_type"/>
-                   
+
+                    <filter string="unpaid" name="is_unpaid" domain="[('state','=','unpaid')]" context="{}" />
+                    <filter string="in process" name="is_process" domain="[('state','=','process')]" context="{}" />
+                    <filter string="pay" name="is_pay" domain="[('state','=','pay')]" context="{}" />
+
+                    <filter context="{'group_by' : 'state'}" name="by_state" domain="[]" string="state"/>
+
+
                 </search>
             </field>
         </record>
 
-        <record id=">pit_fee_action" model="ir.actions.act_window">
+        <record id="pit_fee_action" model="ir.actions.act_window">
             <field name="name">fees</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">pit.fee</field>
@@ -69,9 +76,9 @@
             <field name="view_id" ref="view_pit_fee_tree" />
         </record>
 
-        <menuitem id="menu_st_pit_fee" action=">pit_fee_action" name="Fees" parent="menu_pit_student_root" sequence="30"/>
+        <menuitem id="menu_st_pit_fee" action="pit_fee_action" name="Fees" parent="menu_pit_student_root" sequence="30"/>
 
-        <menuitem id="menu_pit_fee" action=">pit_fee_action" name="Fees" parent="menu_pit_config_root" sequence="30"/>
+        <menuitem id="menu_pit_fee" action="pit_fee_action" name="Fees" parent="menu_pit_config_root" sequence="30"/>
 
 
 

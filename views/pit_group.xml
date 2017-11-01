@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+
+
         <record id="view_pit_school_course_group_tree" model="ir.ui.view">
             <field name="name">pit.school.course.group.tree</field>
             <field name="model">pit.school.course.group</field>
@@ -23,6 +25,14 @@
             <field name="arch" type="xml">
                 <form string="Group">
                     <header>
+
+                        <field name="id" invisible="True" />
+                        <button class="oe_inline oe_stat_button" type="object" 
+                                    name="open_enrollment" icon="fa-credit-card"
+                                    context="{'group_id':id}">
+                                   <div>New enrollment<br/></div>
+                        </button>
+
                     </header>
 
                     <group col="4">
@@ -45,12 +55,16 @@
 
                     <page string="enrolment">
 
+
                         <span>
                             <field name="enrollment_ids" >
                                 <tree>
-                                        <field name="name"/>
-                                        <field name="state"/>
+                                        <field name="id" invisible="True"/>
                                         <field name="student_id"/>
+                                        <field name="partner_id"/>
+                                        <field name="pricelist_id"/>
+                                        <field name="state"/>
+                                        <button  type="action" name="%(pitman_base.pit_fee_action)d" icon="fa-strikethrough" context="{'search_default_by_state':1,'search_default_enrollment_id':id}" />
                                 </tree>
                             </field>
                         </span>

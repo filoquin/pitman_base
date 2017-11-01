@@ -68,6 +68,11 @@ msgid "Active"
 msgstr "Activo"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.pit_school_course_group_view_search
+msgid "Actual"
+msgstr "Actual"
+
+#. module: pitman_base
 #: model:ir.ui.view,arch_db:pitman_base.view_pit_location
 msgid "Address"
 msgstr "Dirección"
@@ -133,6 +138,7 @@ msgstr "Grupo sanguineo"
 
 #. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_calendar_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_enrollment_ids
 #: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course_group
 msgid "Calendar"
 msgstr "Calendario"
@@ -811,6 +817,11 @@ msgid "Name"
 msgstr "Nombre"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course_group
+msgid "New enrollment<br/>"
+msgstr "Nueva Inscripción<br/>"
+
+#. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_comment
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_comment
 msgid "Notes"
@@ -1100,6 +1111,11 @@ msgid "Technical field, used only to display a boolean using a radio button. As 
 msgstr "Technical field, used only to display a boolean using a radio button. As for Odoo v9 RadioButton cannot be used on boolean fields, this one serves as interface. Due to the old API limitations with interface function field, we implement it by hand instead of a true function field. When migrating to the new API the code should be simplified. Changing thecompany_type of a company contact into a company will not displaythis contact as a company contact but as a standalone company."
 
 #. module: pitman_base
+#: sql_constraint:pit.school.course:0
+msgid "The code must be unique"
+msgstr "El codigo debe ser unico"
+
+#. module: pitman_base
 #: model:ir.model.fields,help:pitman_base.field_pit_student_property_account_position_id
 #: model:ir.model.fields,help:pitman_base.field_pit_teacher_property_account_position_id
 msgid "The fiscal position will determine taxes and accounts used for the partner."
@@ -1110,6 +1126,11 @@ msgstr "La posición fiscal determinará los impuestos y cuentas utilizados por 
 #: model:ir.model.fields,help:pitman_base.field_pit_teacher_user_id
 msgid "The internal user that is in charge of communicating with this contact if any."
 msgstr "El usuario interno encargado de comunicarse con este contacto si lo hubiese."
+
+#. module: pitman_base
+#: sql_constraint:pit.school.course:0
+msgid "The name must be unique"
+msgstr "El nombre debe ser unico"
 
 #. module: pitman_base
 #: model:ir.model.fields,help:pitman_base.field_pit_student_has_unreconciled_entries
@@ -1365,6 +1386,11 @@ msgid "enrollments"
 msgstr "Inscripciones"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course_group
+msgid "enrolment"
+msgstr "Incripción"
+
+#. module: pitman_base
 #: selection:pit.course.product,product_type:0
 #: selection:pit.fee,product_type:0
 #: selection:pit.group.product,product_type:0
@@ -1508,6 +1534,11 @@ msgid "school"
 msgstr "escuela"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.>pit_fee_view_search
+msgid "state"
+msgstr "estado"
+
+#. module: pitman_base
 #: model:ir.model,name:pitman_base.model_pit_student
 #: model:ir.model,name:pitman_base.model_pit_student_family
 #: model:ir.ui.view,arch_db:pitman_base.pit_student_tree
@@ -1555,7 +1586,7 @@ msgstr "tipo"
 #. module: pitman_base
 #: selection:pit.fee,state:0
 msgid "unpaid"
-msgstr "unpago"
+msgstr "impago"
 
 #. module: pitman_base
 #: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course

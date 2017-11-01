@@ -113,6 +113,25 @@ class pit_school_course_group(models.Model):
     active = fields.Boolean('Active', default=True)
 
 
+    @api.multi
+    def open_enrollment(self):
+
+        enrollment_form = self.env.ref('pitman_base.view_pit_enrollment', False)
+
+        return {
+            'name': 'New enrollment',
+            'type': 'ir.actions.act_window',
+            'res_model': 'pit.enrollment',
+            'view_type': 'form',
+            'view_mode': 'form',
+            'target': 'new',
+            'views': [(enrollment_form.id, 'form')],
+            'view_id': enrollment_form.id,
+            'context':{'default_group_id': self.id},
+            'flags': {'action_buttons': False},
+
+        }
+
     @api.depends('course_id',)
     @api.onchange('course_id')
     def set_products(self):

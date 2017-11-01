@@ -6,6 +6,7 @@
             <field name="model">pit.student</field>
             <field name="arch" type="xml">
                 <kanban class="o_pit_student_kanban">
+                    <field name="id"/>
                     <field name="color"/>
                     <field name="display_name"/>
                     <field name="email"/>
@@ -25,6 +26,9 @@
                     <field name="type"/>
                     <field name="code"/>
                     <field name="partner_id"/>
+                    <field name="enrollment_ids"/>
+                    <field name="last_payment_fee"/>
+                    <field name="current_debt"/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_global_click o_pit_student_kanban">
@@ -40,7 +44,12 @@
 
                                 <div class="oe_kanban_details">
                                     <strong class="oe_partner_heading"><field name="display_name"/></strong>
+
+
                                     <ul>
+                                        <li t-if="record.last_payment_fee.raw_value">Last payment <field name="last_payment_fee"/></li>
+                                        <li t-if="record.current_debt.raw_value">Deuda <field name="current_debt"/></li>
+
                                         <li t-if="record.parent_id.raw_value and !record.function.raw_value"><field name="parent_id"/></li>
                                         <li t-if="!record.parent_id.raw_value and record.function.raw_value"><field name="function"/></li>
                                         <li t-if="record.parent_id.raw_value and record.function.raw_value"><field name="function"/> at <field name="parent_id"/></li>
@@ -49,6 +58,7 @@
                                         <li t-if="record.city.raw_value and record.country_id.raw_value"><field name="city"/>, <field name="country_id"/></li>
                                         <li t-if="record.email.raw_value" class="o_text_overflow"><field name="email"/></li>
                                     </ul>
+
                                     <div class="oe_kanban_partner_links"/>
                                 </div>
                             </div>
@@ -67,7 +77,9 @@
                     <field name="code" />
                     <field name="name" />
                     <field name="gender" />
-
+                    <field name="last_payment_fee"/>
+                    <field name="current_debt"/>
+  
                 </tree>
             </field>
         </record>
@@ -82,10 +94,14 @@
                 <form position="attributes">
                     <attribute name="string">Student</attribute>
                 </form>
+
+
                 <field name="name" position="after">
                     <field name="code"/>
                     <field name="id" readonly="1" invisible="1"/>
-
+                    <field name="last_payment_fee"/>
+                    <field name="current_debt"/>
+  
                     <field name="partner_id" class="oe_inline" readonly="1" invisible="1" attrs="{'required': [('id', '!=', False)]}"/>
                 </field>
                 <field name="company_type" position="replace"/>
@@ -99,6 +115,16 @@
                         <field name="gender"/>
                         <field name="blood_group"/>        
                         <field name="allergies"/>
+                        <field name="enrollment_ids">
+                             <tree  >
+                                <field name="name" />
+                                <field name="partner_id" />
+
+
+                            </tree>
+
+                        </field>
+  
             </group>
 
                     </page>
