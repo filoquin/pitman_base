@@ -64,7 +64,6 @@
                                         <field name="partner_id"/>
                                         <field name="pricelist_id"/>
                                         <field name="state"/>
-                                        <button  type="action" name="%(pitman_base.pit_fee_action)d" icon="fa-strikethrough" context="{'search_default_by_state':1,'search_default_enrollment_id':id}" />
                                 </tree>
                             </field>
                         </span>
