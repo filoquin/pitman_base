@@ -36,8 +36,9 @@
     """,
     'author': 'Hormiga G',
     'website': 'http://www.hormigag.com.ar',
-    'depends': ['base', 'product'],
+    'depends': ['base', 'product','hr'],
     'data': [
+        'data/groups.xml',
         'views/pitman.xml',
         'views/pit_student.xml',
         'views/pit_teacher.xml',

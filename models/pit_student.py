@@ -20,6 +20,7 @@
 ##############################################################################
 from openerp import models, fields, api
 from openerp import tools
+from openerp.exceptions import UserError, ValidationError
 
 from openerp.tools.translate import _
 
@@ -66,6 +67,27 @@ class pit_student(models.Model):
         vals['is_student'] = True
         return super(pit_student, self).create(vals)
 
+
+    @api.one
+    def send_student_link(self):
+        user_id=self.env['res.users'].search([('partner_id','=',self.partner_id.id)],limit=1)
+        _logger.info('user_id %r'%user_id)
+        if not self.email :
+            raise ValidationError(_('Email is required.'))
+        
+        if len(user_id) == 0:
+            user_id=self.env['res.users'].create({'name':self.name,'login':self.email,'partner_id':self.partner_id.id})
+            group_id = self.env['ir.model.data'].get_object('pitman_base','pitman_student')
+            _logger.info('group_id %r'%group_id)
+
+            group_id.write({'users': [(4, user_id.id)]})
+
+        #user_id.action_reset_password()
+ 
+
+ 
+
+ 
     @api.one
     def _compute_current_debt(self):
         fees=self.env['pit.fee'].search([('enrollment_id.student_id','=',self.id),('state','=','unpaid'),('date_due','<',fields.Date.today())])     
@@ -110,3 +132,4 @@ class pit_student_family(models.Model):
     relation = fields.Selection([('parent','parent'),('tutor','tutor')],'relation')
     partner_id = fields.Many2one('res.partner','Person')
     phone = fields.Char('Phone',related='partner_id.phone')
+

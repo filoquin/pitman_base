@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+      <record model="ir.module.category" id="pitman_cat">
+            <field name="name">Pitman</field>
+            <field name="description">Permisions and rolls.</field>
+            <field name="sequence">16</field>
+        </record>
+
+        <record id="pitman_administrator" model="res.groups" context="{'noadmin':True}">
+            <field name="name">Pitman Administrator</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="pitman_base.pitman_cat"/>
+            <field name="implied_ids" eval="[(4,ref('account.group_account_user'))]"/>
+        </record>
+        <record id="pitman_secretary" model="res.groups" context="{'noadmin':True}">
+            <field name="name">Pitman secretary</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="pitman_base.pitman_cat"/>
+            <field name="implied_ids" eval="[(4,ref('account.group_account_user'))]"/>
+        </record>
+        <record id="pitman_coordinator" model="res.groups" context="{'noadmin':True}">
+            <field name="name">Pitman coordinator</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="pitman_base.pitman_cat"/>
+            <field name="implied_ids" eval="[(4,ref('account.group_account_user'))]"/>
+        </record>
+
+        <record id="pitman_teacher" model="res.groups" context="{'noadmin':True}">
+            <field name="name">Pitman teacher</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="pitman_base.pitman_cat"/>
+            <field name="implied_ids" eval="[(4,ref('account.group_account_user'))]"/>
+        </record>
+        <record id="pitman_student" model="res.groups" context="{'noadmin':True}">
+            <field name="name">Pitman student</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="pitman_base.pitman_cat"/>
+            <field name="implied_ids" eval="[(4,ref('account.group_account_user'))]"/>
+        </record>
+
+    </data>
+</openerp>
+

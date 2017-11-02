@@ -82,6 +82,15 @@
                 <form position="attributes">
                     <attribute name="string">teacher</attribute>
                 </form>
+                <xpath expr="/form/*" position="before">
+                     <header>
+
+                     <field name="employee_id" invisible="True"/>
+                     <button class="oe_inline oe_stat_button" type="object"  name="create_employee"  string="create employee" ></button>
+                     </header>
+                </xpath>
+
+
                 <field name="name" position="after">
                     <field name="code"/>
                     <field name="id" readonly="1" invisible="1"/>

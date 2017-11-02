@@ -94,6 +94,12 @@
                 <form position="attributes">
                     <attribute name="string">Student</attribute>
                 </form>
+                <xpath expr="/form/*" position="before">
+                     <header>
+
+                     <button class="oe_inline oe_stat_button" type="object"  name="send_student_link"  string="send user link" ></button>
+                     </header>
+                </xpath>
 
 
                 <field name="name" position="after">

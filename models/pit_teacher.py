@@ -52,6 +52,8 @@ class pit_teacher(models.Model):
         'Blood Group')
     allergies = fields.Char('Allergies' )
 
+    employee_id = fields.Many2one('hr.employee', 'Employee')
+
     @api.model
     @api.returns('self', lambda value: value.id)
     def create(self, vals):
@@ -69,3 +71,23 @@ class pit_teacher(models.Model):
             state = self.env['res.country.state'].browse(state_id)
             return {'value': {'country_id': state.country_id.id}}
         return {'value': {}}
+
+    @api.one
+    def create_employee(self):
+        vals = {
+            'name': self.name ,
+            'address_home_id': self.partner_id.id
+        }
+        employee_id = self.env['hr.employee'].create(vals)
+        self.write({'employee_id': employee_id.id})
+
+
+    @api.one
+    def add_user(self):
+        
+        vals = {
+            'name': self.name ,
+            'address_home_id': self.partner_id.id
+        }
+        employee_id = self.env['hr.employee'].create(vals)
+        self.write({'employee_id': employee_id.id})
