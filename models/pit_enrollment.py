@@ -64,6 +64,19 @@ class pit_enrollment(models.Model):
         self.name = "%s %s" % (self.student_id.name , self.group_id.name)
 
     @api.one
+    def save_data(self):
+        ## todo validate datas
+        self.state='draft'
+
+
+    @api.one
+    def do_cancel(self):
+        
+        fees = self.env["pit.fee"].search([('enrollment_id','=',self.id),('state','!=','pay')]).write({'state':'cancel'})        
+        self.state='cancel'
+
+
+    @api.one
     def do_enrollment(self):
 
 
@@ -169,6 +182,12 @@ class pit_fee(models.Model):
     pay_amount = fields.Float('amount')
 
     product_ids = fields.One2many('pit.fee.product','fee_id',string='product')
+
+    @api.multi
+    def do_cancel(self):
+        self.state='cancel'
+        
+
 
 class pit_fee_product(models.Model):
 

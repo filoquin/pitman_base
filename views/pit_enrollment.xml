@@ -40,7 +40,9 @@
                     
                     </group>
                     <footer>
-                     <button class="oe_inline oe_stat_button" type="object"  name="do_enrollment"  string="enrollment" states="draft"></button>
+                     <button class="oe_inline oe_stat_button" type="object"  name="do_enrollment"  string="Confirm" states="draft"></button>
+                     <button class="oe_inline oe_stat_button" type="object"  name="save"  string="Save" states="draft"></button>
+
                      </footer>
 
 

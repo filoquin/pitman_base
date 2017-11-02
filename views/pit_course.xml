@@ -56,6 +56,11 @@
                        </span>
 
                     </group>
+                    <group string="info">
+                                <field name="title" />
+                                <field name="description" />
+
+                    </group>
 
                 </form>
             </field>

@@ -56,6 +56,9 @@ class pit_school_course(models.Model):
     workload_ids = fields.One2many('pit.school.workload','course_id',string='Workloads')
 
 
+    description = fields.Html()
+    title = fields.text()
+
     active = fields.Boolean('Active', default=True)
 
     @api.onchange('name')
