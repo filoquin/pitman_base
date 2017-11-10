@@ -118,7 +118,27 @@
 
             </field>
         </record>
-        
+        <record id="teacher" model="ir.ui.view">
+            <field name="name">pit.teacher.search</field>
+            <field name="model">pit.teacher</field>
+            <field name="arch" type="xml">
+                <search string="teacher">
+                   <field name="name" filter_domain="['|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self)]"/>
+    
+                        <field name="partner_id"/>
+                        <field name="code"/>
+                        <field name="emergency_contact"/>
+                        <field name="family_ids"/>
+                        <field name="gender"/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Name" domain="[]" context="{'group_by':'name'}" />
+                        <filter string="ID" domain="[]" context="{'group_by':'code'}" />
+                    </group>
+            </search>
+
+            </field>
+        </record>
+
 
 
 

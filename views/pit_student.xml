@@ -167,8 +167,8 @@
             <field name="model">pit.student</field>
             <field name="arch" type="xml">
                 <search string="student">
-                    <field name="name" >
-                    </field>
+                    <field name="name" filter_domain="['|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self)]"/>
+
     
                         <field name="partner_id"/>
                         <field name="code"/>
