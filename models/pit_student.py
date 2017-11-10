@@ -71,15 +71,13 @@ class pit_student(models.Model):
     @api.one
     def send_student_link(self):
         user_id=self.env['res.users'].search([('partner_id','=',self.partner_id.id)],limit=1)
-        _logger.info('user_id %r'%user_id)
         if not self.email :
             raise ValidationError(_('Email is required.'))
         
         if len(user_id) == 0:
             user_id=self.env['res.users'].create({'name':self.name,'login':self.email,'partner_id':self.partner_id.id})
             group_id = self.env['ir.model.data'].get_object('pitman_base','pitman_student')
-            _logger.info('group_id %r'%group_id)
-
+ 
             group_id.write({'users': [(4, user_id.id)]})
 
         #user_id.action_reset_password()

@@ -159,9 +159,32 @@
 
             </field>
         </record>
-        
+    
 
 
+        <record id="pitman_student_search" model="ir.ui.view">
+            <field name="name">pit.student.search</field>
+            <field name="model">pit.student</field>
+            <field name="arch" type="xml">
+                <search string="student">
+                    <field name="name" >
+                    </field>
+    
+                        <field name="partner_id"/>
+                        <field name="code"/>
+                        <field name="emergency_contact"/>
+                        <field name="family_ids"/>
+                        <field name="gender"/>
+                        <field name="enrollment_ids"/>
+                        <field name="last_payment_fee"/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Name" domain="[]" context="{'group_by':'name'}" />
+                        <filter string="ID" domain="[]" context="{'group_by':'code'}" />
+                    </group>
+            </search>
+
+            </field>
+        </record>
 
         <record id="action_pit_student" model="ir.actions.act_window">
             <field name="name">Students</field>

@@ -82,12 +82,18 @@ class pit_teacher(models.Model):
         self.write({'employee_id': employee_id.id})
 
 
+
     @api.one
-    def add_user(self):
+    def send_user_link(self):
+        user_id=self.env['res.users'].search([('partner_id','=',self.partner_id.id)],limit=1)
+        if not self.email :
+            raise ValidationError(_('Email is required.'))
         
-        vals = {
-            'name': self.name ,
-            'address_home_id': self.partner_id.id
-        }
-        employee_id = self.env['hr.employee'].create(vals)
-        self.write({'employee_id': employee_id.id})
+        if len(user_id) == 0:
+            user_id=self.env['res.users'].create({'name':self.name,'login':self.email,'partner_id':self.partner_id.id})
+            group_id = self.env['ir.model.data'].get_object('pitman_base','pitman_teacher')
+ 
+            group_id.write({'users': [(4, user_id.id)]})
+
+        #user_id.action_reset_password()
+ 
