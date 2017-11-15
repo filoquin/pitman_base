@@ -2,7 +2,7 @@
 <openerp>
     <data>
         <menuitem id="menu_pit_root" name="Pitman" sequence="10" />
-        <menuitem id="menu_pit_coursemenu_root" name="Courses" sequence="10" />
+        <menuitem id="menu_pit_coursemenu_root" name="Academy" sequence="10" />
         <menuitem id="menu_pit_config_courses"  parent="menu_pit_root"  name="Courses" sequence="50" />
         <menuitem id="menu_pit_config_root"  parent="menu_pit_root"  name="Config" sequence="80" />
 

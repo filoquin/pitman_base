@@ -118,7 +118,7 @@
 
             </field>
         </record>
-        <record id="teacher" model="ir.ui.view">
+        <record id="teacher_filter" model="ir.ui.view">
             <field name="name">pit.teacher.search</field>
             <field name="model">pit.teacher</field>
             <field name="arch" type="xml">
@@ -128,7 +128,6 @@
                         <field name="partner_id"/>
                         <field name="code"/>
                         <field name="emergency_contact"/>
-                        <field name="family_ids"/>
                         <field name="gender"/>
                     <group expand="0" string="Group By...">
                         <filter string="Name" domain="[]" context="{'group_by':'name'}" />

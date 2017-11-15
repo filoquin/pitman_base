@@ -55,6 +55,7 @@
                     <field name="total_fee"/>
                     <field name="enrollment_id"/>
                     <field name="partner_id"/>
+                    <field name="student_id"/>
                     <field name="product_type"/>
 
                     <filter string="unpaid" name="is_unpaid" domain="[('state','=','unpaid')]" context="{}" />

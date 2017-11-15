@@ -533,7 +533,7 @@ msgstr "Sexo"
 #: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course_group
 #: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course_group_tree
 msgid "Group"
-msgstr "Grupo"
+msgstr "Cursada"
 
 #. module: pitman_base
 #: model:ir.ui.view,arch_db:pitman_base.pit_location_view_search
@@ -544,7 +544,7 @@ msgstr "Agrupar por..."
 #: model:ir.ui.menu,name:pitman_base.menu_pit_school_course_group
 #: model:ir.ui.menu,name:pitman_base.menu_pitst_school_course_group
 msgid "Grup"
-msgstr "Grupo"
+msgstr "Cursada|"
 
 #. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_has_unreconciled_entries
@@ -1431,7 +1431,7 @@ msgstr "Desde"
 #: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_group_id
 #: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_group_id
 msgid "group"
-msgstr "grupo"
+msgstr "Cursada"
 
 #. module: pitman_base
 #: model:ir.model,name:pitman_base.model_pit_group_product

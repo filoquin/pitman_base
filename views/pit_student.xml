@@ -59,7 +59,11 @@
                                         <li t-if="record.email.raw_value" class="o_text_overflow"><field name="email"/></li>
                                     </ul>
 
-                                    <div class="oe_kanban_partner_links"/>
+                                    <div class="oe_kanban_student_links">
+                                        <button  class="oe_button_box" name="list_fees" type="object">View fee</button>
+
+
+                                    </div>
                                 </div>
                             </div>
 
@@ -98,7 +102,16 @@
                      <header>
 
                      <button class="oe_inline oe_stat_button" type="object"  name="send_student_link"  string="send user link" ></button>
+                       <button  class="oe_inline oe_stat_button"  type="action" string="Fees"
+                            name="%(pit_fee_action)d"
+                            context="{'search_default_student_id': id}">Fees</button>
+
+                       <button  class="oe_inline oe_stat_button"  type="action" string="unpaid"
+                            name="%(pit_fee_action)d"
+                            context="{'search_default_student_id': id,'search_default_is_unpaid': True}">unpaid</button>
+
                      </header>
+
                 </xpath>
 
 
@@ -114,6 +127,29 @@
 
 
                   <xpath expr="//notebook[last()]" position="inside">
+
+                    <page string="Academy">
+                    <group>
+                    
+                        <field name="enrollment_ids">
+                             <tree  >
+                                <field name="partner_id" invisible="True" />
+                                <field name="student_id" invisible="True" />
+                                <field name="name" />
+                                <field name="state" />
+                                <field name="date_from" />
+                                <field name="date_to" />
+                                           <button   class="oe_inline oe_stat_button"  type="action" string="Fees"
+                                                name="%(pit_fee_action)d" 
+                                                context="{'search_default_enrollment_id': id}">Fees</button>
+
+                            </tree>
+
+                        </field>
+                      </group>
+                    </page>
+
+
                     <page string="Student">
                                     <group>
 
@@ -121,17 +157,8 @@
                         <field name="gender"/>
                         <field name="blood_group"/>        
                         <field name="allergies"/>
-                        <field name="enrollment_ids">
-                             <tree  >
-                                <field name="name" />
-                                <field name="partner_id" />
-
-
-                            </tree>
-
-                        </field>
-  
-            </group>
+          
+                  </group>
 
                     </page>
                     <page string="family">

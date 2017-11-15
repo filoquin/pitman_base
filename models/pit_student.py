@@ -121,6 +121,26 @@ class pit_student(models.Model):
             return {'value': {'country_id': state.country_id.id}}
         return {'value': {}}
 
+    @api.multi
+    def list_fees(self):
+
+   
+        view = { 
+            'name':"fee",
+            'view_mode': 'tree',
+            'view_id': False,
+            'view_type': 'tree',
+            'res_model': 'pit.fee',
+            'res_id': False,
+            'type': 'ir.actions.act_window',
+            'nodestroy': True,
+            'target': 'self',
+            'domain': '[("student_id","=",%d)]'%self.id,
+        }
+        return view
+
+
+
 class pit_student_family(models.Model):
 
     _name = "pit.student.family"

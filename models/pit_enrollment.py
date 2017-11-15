@@ -39,10 +39,14 @@ class pit_enrollment(models.Model):
     _name = "pit.enrollment"
     _description = "enrollment"
 
-    state = fields.Selection([('draft','Draft'),('active','active'),('cancel','cancel')],default='draft')
+    state = fields.Selection([('draft','Draft'),('active','active'),('cancel','cancel'),('abandoned','abandoned'),('finish','finish')],default='draft')
 
     student_id = fields.Many2one('pit.student', 'Student')
     group_id = fields.Many2one('pit.school.course.group', 'group')
+    date_from = fields.Date('from',related='group_id.date_from')
+    date_to = fields.Date('to',related='group_id.date_to')
+    course_id = fields.Many2one('pit.school.course','Course',related='group_id.course_id')
+
     enrollment_date = fields.Date('Date')
 
     partner_id = fields.Many2one('res.partner', 'partner')    
@@ -173,6 +177,7 @@ class pit_fee(models.Model):
     total_fee = fields.Integer('Total Fee')
 
     enrollment_id = fields.Many2one('pit.enrollment', 'enrollment',ondelete='cascade')
+    student_id = fields.Many2one('pit.student', 'Student',related="enrollment_id.student_id",store=True)
     partner_id = fields.Many2one('res.partner', 'partner')    
     product_type = fields.Selection([('enrollment','enrollment'),('mensual','mensual'),('exam','exam')],string='type')
 
