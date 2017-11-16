@@ -29,6 +29,8 @@
                     <field name="enrollment_ids"/>
                     <field name="last_payment_fee"/>
                     <field name="current_debt"/>
+                    <field name="active_course_ids"/>
+
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_global_click o_pit_student_kanban">
@@ -60,8 +62,12 @@
                                     </ul>
 
                                     <div class="oe_kanban_student_links">
-                                        <button  class="oe_button_box" name="list_fees" type="object">View fee</button>
 
+                                        <a name="%(pitman_base.pit_fee_action_by_sudent)d" type="action" class="o_project_kanban_box"> Ver cuotas          
+                                        </a> 
+
+                                        <field name="active_course_ids">
+                                        </field>
 
                                     </div>
                                 </div>
@@ -120,6 +126,7 @@
                     <field name="id" readonly="1" invisible="1"/>
                     <field name="last_payment_fee"/>
                     <field name="current_debt"/>
+                    <field name="active_course_ids" widget="many2many_tags"/>
   
                     <field name="partner_id" class="oe_inline" readonly="1" invisible="1" attrs="{'required': [('id', '!=', False)]}"/>
                 </field>
@@ -204,6 +211,8 @@
                         <field name="gender"/>
                         <field name="enrollment_ids"/>
                         <field name="last_payment_fee"/>
+                        <filter string="actives" domain="[('enrollment_ids.group_id.date_to','>',datetime.datetime.now().strftime('%Y-%m-%d'))]" context="" />
+
                     <group expand="0" string="Group By...">
                         <filter string="Name" domain="[]" context="{'group_by':'name'}" />
                         <filter string="ID" domain="[]" context="{'group_by':'code'}" />

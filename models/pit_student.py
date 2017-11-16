@@ -60,6 +60,7 @@ class pit_student(models.Model):
     enrollment_ids = fields.One2many('pit.enrollment','student_id') 
     last_payment_fee = fields.Date('last fee',compute="_compute_last_fee") 
     current_debt = fields.Float('current debt',compute="_compute_current_debt") 
+    active_course_ids = fields.One2many('pit.school.course','id',compute='_compute_active_course') 
 
     @api.model
     @api.returns('self', lambda value: value.id)
@@ -83,8 +84,14 @@ class pit_student(models.Model):
         #user_id.action_reset_password()
  
 
- 
-
+    @api.one
+    def _compute_active_course(self):
+        ids = []
+        active_courses=self.env['pit.enrollment'].search([('student_id','=',self.id),('group_id.date_to','>',fields.Date.today())])
+        for  enrollment in active_courses:
+            ids.append(enrollment.group_id.course_id.id)
+        _logger.info('ids %r'%ids)
+        self.active_course_ids = ids
  
     @api.one
     def _compute_current_debt(self):
@@ -127,7 +134,7 @@ class pit_student(models.Model):
    
         view = { 
             'name':"fee",
-            'view_mode': 'tree',
+            'view_mode': 'form',
             'view_id': False,
             'view_type': 'tree',
             'res_model': 'pit.fee',
@@ -144,7 +151,7 @@ class pit_student(models.Model):
 class pit_student_family(models.Model):
 
     _name = "pit.student.family"
-    _description = "student"
+    _description = "student family"
 
     student_id = fields.Many2one('pit.student','Student')
     relation = fields.Selection([('parent','parent'),('tutor','tutor')],'relation')

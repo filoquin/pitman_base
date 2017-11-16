@@ -39,6 +39,7 @@
     'depends': ['base', 'product','hr'],
     'data': [
         'data/groups.xml',
+        'security/ir.model.access.csv',
         'views/pitman.xml',
         'views/pit_student.xml',
         'views/pit_teacher.xml',

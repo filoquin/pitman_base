@@ -1,43 +1,53 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* pitman_base
+# 	* pitman_base
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20170926\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-12 12:57+0000\n"
-"PO-Revision-Date: 2017-10-12 12:57+0000\n"
+"POT-Creation-Date: 2017-11-16 15:36+0000\n"
+"PO-Revision-Date: 2017-11-16 12:39-0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #. module: pitman_base
-#: selection:pit.student,blood_group:0
-#: selection:pit.teacher,blood_group:0
+#: selection:pit.student,blood_group:0 selection:pit.teacher,blood_group:0
 msgid "A+ve"
 msgstr "A+ve"
 
 #. module: pitman_base
-#: selection:pit.student,blood_group:0
-#: selection:pit.teacher,blood_group:0
+#: selection:pit.student,blood_group:0 selection:pit.teacher,blood_group:0
 msgid "A-ve"
 msgstr "A-ve"
 
 #. module: pitman_base
-#: selection:pit.student,blood_group:0
-#: selection:pit.teacher,blood_group:0
+#: selection:pit.student,blood_group:0 selection:pit.teacher,blood_group:0
 msgid "AB+ve"
 msgstr "AB+ve"
 
 #. module: pitman_base
-#: selection:pit.student,blood_group:0
-#: selection:pit.teacher,blood_group:0
+#: selection:pit.student,blood_group:0 selection:pit.teacher,blood_group:0
 msgid "AB-ve"
 msgstr "AB-ve"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_afip_responsability_type_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_afip_responsability_type_id
+msgid "AFIP Responsability Type"
+msgstr "Tipo de Responsabilidad AFIP"
+
+#. module: pitman_base
+#: model:ir.ui.menu,name:pitman_base.menu_pit_coursemenu_root
+#: model:ir.ui.view,arch_db:pitman_base.pit_student_form_view
+msgid "Academy"
+msgstr "Academia"
 
 #. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_property_account_payable_id
@@ -68,6 +78,23 @@ msgid "Active"
 msgstr "Activo"
 
 #. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_active_course_ids
+msgid "Active course ids"
+msgstr "Active course ids"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_actividad_monotributo_padron
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_actividad_monotributo_padron
+msgid "Actividad monotributo padron"
+msgstr "Actividad monotributo padron"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_actividades_padron
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_actividades_padron
+msgid "Actividades"
+msgstr "Actividades"
+
+#. module: pitman_base
 #: model:ir.ui.view,arch_db:pitman_base.pit_school_course_group_view_search
 msgid "Actual"
 msgstr "Actual"
@@ -95,14 +122,12 @@ msgid "Available seats"
 msgstr "Asientos"
 
 #. module: pitman_base
-#: selection:pit.student,blood_group:0
-#: selection:pit.teacher,blood_group:0
+#: selection:pit.student,blood_group:0 selection:pit.teacher,blood_group:0
 msgid "B+ve"
 msgstr "B+ve"
 
 #. module: pitman_base
-#: selection:pit.student,blood_group:0
-#: selection:pit.teacher,blood_group:0
+#: selection:pit.student,blood_group:0 selection:pit.teacher,blood_group:0
 msgid "B-ve"
 msgstr "B-ve"
 
@@ -245,6 +270,11 @@ msgid "Config"
 msgstr "Configuración"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_enrollment
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_child_ids
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_child_ids
 msgid "Contacts"
@@ -259,6 +289,12 @@ msgid "Contracts"
 msgstr "Contratos"
 
 #. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_payment_method_count
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_payment_method_count
+msgid "Count Payment Method"
+msgstr "Cuenta Metodo de Pago"
+
+#. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_location_country_id
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_country_id
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_country_id
@@ -269,9 +305,8 @@ msgstr "País"
 #. module: pitman_base
 #: model:ir.actions.act_window,name:pitman_base.pit_school_course_action
 #: model:ir.model,name:pitman_base.model_pit_school_course
-#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_course_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_course_id
 #: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_course_id
-#: model:ir.ui.view,arch_db:pitman_base.>pit_fee_view_search
 #: model:ir.ui.view,arch_db:pitman_base.pit_enrollment_view_search
 #: model:ir.ui.view,arch_db:pitman_base.pit_school_course_view_search
 #: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course
@@ -300,7 +335,6 @@ msgstr "Carga horaria"
 
 #. module: pitman_base
 #: model:ir.ui.menu,name:pitman_base.menu_pit_config_courses
-#: model:ir.ui.menu,name:pitman_base.menu_pit_coursemenu_root
 #: model:ir.ui.menu,name:pitman_base.menu_pit_school_course
 msgid "Courses"
 msgstr "Cursos"
@@ -352,6 +386,12 @@ msgid "Credit Limit"
 msgstr "Crédito concedido"
 
 #. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_cuit
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_cuit
+msgid "Cuit"
+msgstr "CUIT"
+
+#. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_currency_id
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_currency_id
 msgid "Currency"
@@ -397,6 +437,11 @@ msgid "Day of Week"
 msgstr "Día de la semana"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.pit_student_kanban_view
+msgid "Deuda"
+msgstr "Deuda"
+
+#. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_course_product_display_name
 #: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_display_name
 #: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_display_name
@@ -419,12 +464,12 @@ msgstr "Nombre mostrado"
 #. module: pitman_base
 #: model:ir.ui.view,arch_db:pitman_base.view_pit_do_enrollment
 msgid "Do"
-msgstr "Do"
+msgstr "Hacer"
 
 #. module: pitman_base
 #: selection:pit.enrollment,state:0
 msgid "Draft"
-msgstr "Draft"
+msgstr "Borrador"
 
 #. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_email
@@ -439,14 +484,28 @@ msgid "Email Messages and Notifications"
 msgstr "Enviar mensajes y notificaciones"
 
 #. module: pitman_base
+#: code:addons/pitman_base/models/pit_student.py:76
+#: code:addons/pitman_base/models/pit_teacher.py:90
+#, python-format
+msgid "Email is required."
+msgstr "Email is required."
+
+#. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_emergency_contact
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_emergency_contact
 msgid "Emergency Contact"
-msgstr "Emergency Contact"
+msgstr "Emergencia"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_empleador_padron
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_empleador_padron
+msgid "Empleador padron"
+msgstr "Empleador padron"
 
 #. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_employee
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_employee
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_employee_id
 msgid "Employee"
 msgstr "Empleado"
 
@@ -460,6 +519,17 @@ msgstr "Fecha final"
 #: model:ir.ui.menu,name:pitman_base.menu_pitst_enrollment
 msgid "Enrollment"
 msgstr "Inscripción"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_enrollment_ids
+msgid "Enrollment ids"
+msgstr "Inscripciones"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_estado_padron
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_estado_padron
+msgid "Estado AFIP"
+msgstr "Estado AFIP"
 
 #. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_ids
@@ -480,12 +550,13 @@ msgstr "Productos"
 #. module: pitman_base
 #: model:ir.ui.menu,name:pitman_base.menu_pit_fee
 #: model:ir.ui.menu,name:pitman_base.menu_st_pit_fee
+#: model:ir.ui.view,arch_db:pitman_base.>pit_fee_view_search
+#: model:ir.ui.view,arch_db:pitman_base.pit_student_form_view
 msgid "Fees"
 msgstr "Cuotas"
 
 #. module: pitman_base
-#: selection:pit.student,gender:0
-#: selection:pit.teacher,gender:0
+#: selection:pit.student,gender:0 selection:pit.teacher,gender:0
 msgid "Female"
 msgstr "Femenino"
 
@@ -514,15 +585,45 @@ msgid "Followers (Partners)"
 msgstr "Seguidores (Empresas)"
 
 #. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_formated_cuit
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_formated_cuit
+msgid "Formated cuit"
+msgstr "cuit con formato"
+
+#. module: pitman_base
 #: selection:pit.school.course.calendar,dayofweek:0
 msgid "Friday"
 msgstr "Viernes"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_imp_ganancias_padron
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_imp_ganancias_padron
+msgid "Ganancias"
+msgstr "Ganancias"
 
 #. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_gender
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_gender
 msgid "Gender"
 msgstr "Sexo"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_gross_income_jurisdiction_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_gross_income_jurisdiction_ids
+msgid "Gross Income Jurisdictions"
+msgstr "Jurisdicciones de ingresos brutos"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_gross_income_number
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_gross_income_number
+msgid "Gross Income Number"
+msgstr "Número de Ingresos Brutos"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_gross_income_type
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_gross_income_type
+msgid "Gross Income Type"
+msgstr "Tipo de Ingresos Brutos"
 
 #. module: pitman_base
 #: model:ir.actions.act_window,name:pitman_base.pit_school_course_group_action
@@ -533,10 +634,12 @@ msgstr "Sexo"
 #: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course_group
 #: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course_group_tree
 msgid "Group"
-msgstr "Cursada"
+msgstr "Grupo"
 
 #. module: pitman_base
 #: model:ir.ui.view,arch_db:pitman_base.pit_location_view_search
+#: model:ir.ui.view,arch_db:pitman_base.pitman_student_search
+#: model:ir.ui.view,arch_db:pitman_base.teacher_filter
 msgid "Group By..."
 msgstr "Agrupar por..."
 
@@ -544,7 +647,7 @@ msgstr "Agrupar por..."
 #: model:ir.ui.menu,name:pitman_base.menu_pit_school_course_group
 #: model:ir.ui.menu,name:pitman_base.menu_pitst_school_course_group
 msgid "Grup"
-msgstr "Cursada|"
+msgstr "Grupo"
 
 #. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_has_unreconciled_entries
@@ -569,6 +672,8 @@ msgstr "Contiene entradas irreconciliadas"
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_id
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_id
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_id
+#: model:ir.ui.view,arch_db:pitman_base.pitman_student_search
+#: model:ir.ui.view,arch_db:pitman_base.teacher_filter
 msgid "ID"
 msgstr "ID"
 
@@ -577,6 +682,18 @@ msgstr "ID"
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_im_status
 msgid "IM Status"
 msgstr "Estado del chat"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_imp_iva_padron
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_imp_iva_padron
+msgid "IVA"
+msgstr "IVA"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_id_numbers
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_id_numbers
+msgid "Identification Numbers"
+msgstr "Números de identificación"
 
 #. module: pitman_base
 #: model:ir.model.fields,help:pitman_base.field_pit_student_message_unread
@@ -607,6 +724,18 @@ msgstr "Si el idioma seleccionado está cargado en el sistema, todos los documen
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_image
 msgid "Image"
 msgstr "Imagen"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_impuestos_padron
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_impuestos_padron
+msgid "Impuestos"
+msgstr "Impuestos"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_integrante_soc_padron
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_integrante_soc_padron
+msgid "Integrante Sociedad"
+msgstr "Integrante Sociedad"
 
 #. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_ref
@@ -691,6 +820,12 @@ msgid "Last Modified on"
 msgstr "Última Modifiación en"
 
 #. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_last_update_padron
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_last_update_padron
+msgid "Last Update Padron"
+msgstr "Última actualización de Padrón"
+
+#. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_course_product_write_uid
 #: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_write_uid
 #: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_write_uid
@@ -731,6 +866,11 @@ msgid "Last Updated on"
 msgstr "Última actualización en"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.pit_student_kanban_view
+msgid "Last payment"
+msgstr "Ultimo Pago"
+
+#. module: pitman_base
 #: model:ir.model.fields,help:pitman_base.field_pit_student_last_time_entries_checked
 #: model:ir.model.fields,help:pitman_base.field_pit_teacher_last_time_entries_checked
 msgid "Last time the invoices & payments matching was performed for this partner. It is set either if there's not at least an unreconciled debit and an unreconciled credit or if you click the \"Done\" button."
@@ -746,7 +886,6 @@ msgstr "Fecha de la última conciliación de facturas y pagos"
 #: model:ir.actions.act_window,name:pitman_base.pit_location_action
 #: model:ir.model,name:pitman_base.model_pit_location
 #: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom_location_id
-#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_location_id
 #: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_location_id
 #: model:ir.ui.view,arch_db:pitman_base.view_pit_location
 msgid "Location"
@@ -764,13 +903,24 @@ msgid "Locations"
 msgstr "Ubicaciones"
 
 #. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_main_id_category_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_main_id_category_id
+msgid "Main Identification Category"
+msgstr "Categoría de identificación principal"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_main_id_number
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_main_id_number
+msgid "Main Identification Number"
+msgstr "Número de identificación principal"
+
+#. module: pitman_base
 #: model:ir.model,name:pitman_base.model_pit_do_enrollment
 msgid "Make enrollment"
 msgstr "Make enrollment"
 
 #. module: pitman_base
-#: selection:pit.student,gender:0
-#: selection:pit.teacher,gender:0
+#: selection:pit.student,gender:0 selection:pit.teacher,gender:0
 msgid "Male"
 msgstr "Masculino"
 
@@ -804,6 +954,12 @@ msgid "Monday"
 msgstr "Lunes"
 
 #. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_monotributo_padron
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_monotributo_padron
+msgid "Monotributo"
+msgstr "Monotributo"
+
+#. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_name
 #: model:ir.model.fields,field_description:pitman_base.field_pit_fee_name
 #: model:ir.model.fields,field_description:pitman_base.field_pit_location_classroom_name
@@ -813,6 +969,8 @@ msgstr "Lunes"
 #: model:ir.model.fields,field_description:pitman_base.field_pit_school_name
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_name
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_name
+#: model:ir.ui.view,arch_db:pitman_base.pitman_student_search
+#: model:ir.ui.view,arch_db:pitman_base.teacher_filter
 msgid "Name"
 msgstr "Nombre"
 
@@ -846,14 +1004,12 @@ msgid "Number of unread messages"
 msgstr "Número de mensajes no leidos"
 
 #. module: pitman_base
-#: selection:pit.student,blood_group:0
-#: selection:pit.teacher,blood_group:0
+#: selection:pit.student,blood_group:0 selection:pit.teacher,blood_group:0
 msgid "O+ve"
 msgstr "O+ve"
 
 #. module: pitman_base
-#: selection:pit.student,blood_group:0
-#: selection:pit.teacher,blood_group:0
+#: selection:pit.student,blood_group:0 selection:pit.teacher,blood_group:0
 msgid "O-ve"
 msgstr "O-ve"
 
@@ -864,10 +1020,15 @@ msgid "Opt-Out"
 msgstr "No acepta recibir mensajes"
 
 #. module: pitman_base
-#: selection:pit.student,gender:0
-#: selection:pit.teacher,gender:0
+#: selection:pit.student,gender:0 selection:pit.teacher,gender:0
 msgid "Other"
 msgstr "Otro"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_other_document_type_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_other_document_type_ids
+msgid "Other Documents"
+msgstr "Otros documentos"
 
 #. module: pitman_base
 #: selection:pit.group.product,product_type:0
@@ -898,6 +1059,17 @@ msgid "Payment Date"
 msgstr "Fecha de pago"
 
 #. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_payment_method_ids
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_payment_method_ids
+msgid "Payment Methods"
+msgstr "Formas de pago"
+
+#. module: pitman_base
+#: model:ir.module.category,description:pitman_base.pitman_cat
+msgid "Permisions and rolls."
+msgstr "Permisos y roles"
+
+#. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_partner_id
 msgid "Person"
 msgstr "Persona"
@@ -910,17 +1082,45 @@ msgid "Phone"
 msgstr "Teléfono"
 
 #. module: pitman_base
+#: model:ir.module.category,name:pitman_base.pitman_cat
 #: model:ir.ui.menu,name:pitman_base.menu_pit_root
 msgid "Pitman"
 msgstr "Pitman"
 
 #. module: pitman_base
+#: model:res.groups,name:pitman_base.pitman_administrator
+msgid "Pitman Administrator"
+msgstr "Pitman Administrador"
+
+#. module: pitman_base
+#: model:res.groups,name:pitman_base.pitman_coordinator
+msgid "Pitman coordinator"
+msgstr "Pitman coordinador"
+
+#. module: pitman_base
+#: model:res.groups,name:pitman_base.pitman_secretary
+msgid "Pitman secretary"
+msgstr "Pitman secretaria"
+
+#. module: pitman_base
+#: model:res.groups,name:pitman_base.pitman_student
+msgid "Pitman student"
+msgstr "Pitman studiante"
+
+#. module: pitman_base
+#: model:res.groups,name:pitman_base.pitman_teacher
+msgid "Pitman teacher"
+msgstr "Pitman profesor"
+
+#. module: pitman_base
 #: model:ir.model.fields,help:pitman_base.field_pit_student_notify_email
 #: model:ir.model.fields,help:pitman_base.field_pit_teacher_notify_email
-msgid "Policy to receive emails for new messages pushed to your personal Inbox:\n"
+msgid ""
+"Policy to receive emails for new messages pushed to your personal Inbox:\n"
 "- Never: no emails are sent\n"
 "- All Messages: for every notification you receive in your Inbox"
-msgstr "Política para recibir correos electrónicos para los nuevos mensajes insertados en su bandeja de entrada personal\n"
+msgstr ""
+"Política para recibir correos electrónicos para los nuevos mensajes insertados en su bandeja de entrada personal\n"
 "- Nunca: No se enviará ningún correo\n"
 "- Todos los mensajes: Se enviará un correo para cada notificación que reciba en su bandeja de entrada"
 
@@ -967,10 +1167,21 @@ msgid "Saturday"
 msgstr "Sábado"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_enrollment
+msgid "Save"
+msgstr "Guardar"
+
+#. module: pitman_base
 #: model:ir.model.fields,help:pitman_base.field_pit_student_use_parent_address
 #: model:ir.model.fields,help:pitman_base.field_pit_teacher_use_parent_address
 msgid "Select this if you want to set company's address information  for this contact"
 msgstr "Seleccione esto si quiere establecer la información de la dirección de la compañía para este contacto"
+
+#. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_other_document_type_ids
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_other_document_type_ids
+msgid "Set here if this partner can issue other documents further than invoices, credit notes and debit notes"
+msgstr "Establezca aquí si este partner puede emitir otros documentos distintos de facturas, notas de crédito y notas de débito."
 
 #. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_signup_expiration
@@ -1020,6 +1231,12 @@ msgid "Start and End time of class."
 msgstr "Hora de inicio y finalizacion de la clase."
 
 #. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_start_date
+#: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_start_date
+msgid "Start-up Date"
+msgstr "Fecha Comienzo de Actividades"
+
+#. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_date_from
 msgid "Starting Date"
 msgstr "Fecha de inicio"
@@ -1061,6 +1278,7 @@ msgstr "Calle2"
 #. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_student_id
 #: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_student_id
+#: model:ir.model.fields,field_description:pitman_base.field_pit_fee_student_id
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_family_student_id
 #: model:ir.ui.menu,name:pitman_base.menu_pit_student_root
 #: model:ir.ui.view,arch_db:pitman_base.pit_student_form_view
@@ -1145,6 +1363,12 @@ msgid "The partner's timezone, used to output proper date and time values inside
 msgstr "Zona horaria de la empresa, usada para mostrar la fecha y hora adecuadas en los informes. Es importante establecer un valor para este campo. Debería usar la misma zona horaria que se coge en cualquier caso para mostrar los valores de fecha y hora: la zona horaria de su ordenador."
 
 #. module: pitman_base
+#: model:ir.model.fields,help:pitman_base.field_pit_student_gross_income_jurisdiction_ids
+#: model:ir.model.fields,help:pitman_base.field_pit_teacher_gross_income_jurisdiction_ids
+msgid "The state of the company is cosidered the main jurisdiction"
+msgstr "El estado de la empresa se considera la jurisdicción principal"
+
+#. module: pitman_base
 #: model:ir.model.fields,help:pitman_base.field_pit_student_property_account_payable_id
 #: model:ir.model.fields,help:pitman_base.field_pit_teacher_property_account_payable_id
 msgid "This account will be used instead of the default one as the payable account for the current partner"
@@ -1198,6 +1422,7 @@ msgid "Timezone offset"
 msgstr "Compensación zona horaria"
 
 #. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_title
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_title
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_title
 msgid "Title"
@@ -1286,6 +1511,11 @@ msgid "Vendor Payment Term"
 msgstr "Plazo de pago de proveedor"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.pit_student_kanban_view
+msgid "Ver cuotas"
+msgstr "Ver cuotas"
+
+#. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_student_website
 #: model:ir.model.fields,field_description:pitman_base.field_pit_teacher_website
 msgid "Website"
@@ -1329,8 +1559,18 @@ msgstr "C.P."
 
 #. module: pitman_base
 #: selection:pit.enrollment,state:0
+msgid "abandoned"
+msgstr "Abandono"
+
+#. module: pitman_base
+#: selection:pit.enrollment,state:0
 msgid "active"
 msgstr "activo"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.pitman_student_search
+msgid "actives"
+msgstr "actives"
 
 #. module: pitman_base
 #: model:ir.model.fields,field_description:pitman_base.field_pit_fee_amount
@@ -1346,8 +1586,7 @@ msgid "at"
 msgstr "en"
 
 #. module: pitman_base
-#: selection:pit.enrollment,state:0
-#: selection:pit.fee,state:0
+#: selection:pit.enrollment,state:0 selection:pit.fee,state:0
 msgid "cancel"
 msgstr "cancel"
 
@@ -1367,6 +1606,21 @@ msgid "course"
 msgstr "curso"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.pit_teacher_form_view
+msgid "create employee"
+msgstr "Crear empleado"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_current_debt
+msgid "current debt"
+msgstr "Deuda"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_description
+msgid "description"
+msgstr "descripcion"
+
+#. module: pitman_base
 #: model:ir.actions.act_window,name:pitman_base.pit_do_enrollment_action
 msgid "do_enrollments"
 msgstr "Inscribir"
@@ -1375,7 +1629,6 @@ msgstr "Inscribir"
 #: model:ir.model,name:pitman_base.model_pit_enrollment
 #: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_enrollment_id
 #: model:ir.model.fields,field_description:pitman_base.field_pit_fee_enrollment_id
-#: model:ir.ui.view,arch_db:pitman_base.view_pit_enrollment
 #: selection:pit.fee,product_type:0
 msgid "enrollment"
 msgstr "Inscribir"
@@ -1391,8 +1644,7 @@ msgid "enrolment"
 msgstr "Incripción"
 
 #. module: pitman_base
-#: selection:pit.course.product,product_type:0
-#: selection:pit.fee,product_type:0
+#: selection:pit.course.product,product_type:0 selection:pit.fee,product_type:0
 #: selection:pit.group.product,product_type:0
 msgid "exam"
 msgstr "examem"
@@ -1415,13 +1667,20 @@ msgid "fee N"
 msgstr "Cuota N"
 
 #. module: pitman_base
-#: model:ir.actions.act_window,name:pitman_base.>pit_fee_action
+#: model:ir.actions.act_window,name:pitman_base.pit_fee_action
+#: model:ir.actions.act_window,name:pitman_base.pit_fee_action_by_sudent
 #: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_fees
 #: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_fees
 msgid "fees"
 msgstr "Cuotas"
 
 #. module: pitman_base
+#: selection:pit.enrollment,state:0
+msgid "finish"
+msgstr "Finalizado"
+
+#. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_date_from
 #: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_hour_from
 #: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_date_from
 msgid "from"
@@ -1431,12 +1690,22 @@ msgstr "Desde"
 #: model:ir.model.fields,field_description:pitman_base.field_pit_do_enrollment_group_id
 #: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_group_id
 msgid "group"
-msgstr "Cursada"
+msgstr "grupo"
 
 #. module: pitman_base
 #: model:ir.model,name:pitman_base.model_pit_group_product
 msgid "group product"
 msgstr "productos"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.>pit_fee_view_search
+msgid "in process"
+msgstr "en proceso"
+
+#. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course
+msgid "info"
+msgstr "info"
 
 #. module: pitman_base
 #: model:ir.ui.view,arch_db:pitman_base.view_pit_enrollment_tree
@@ -1461,14 +1730,18 @@ msgid "laboratory"
 msgstr "laboratorio"
 
 #. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_student_last_payment_fee
+msgid "last fee"
+msgstr "Ultima cuota"
+
+#. module: pitman_base
 #: model:ir.ui.view,arch_db:pitman_base.pit_location_view_search
 #: model:ir.ui.view,arch_db:pitman_base.pit_school_view_search
 msgid "location"
 msgstr "Ubicacion"
 
 #. module: pitman_base
-#: selection:pit.course.product,product_type:0
-#: selection:pit.fee,product_type:0
+#: selection:pit.course.product,product_type:0 selection:pit.fee,product_type:0
 #: selection:pit.group.product,product_type:0
 msgid "mensual"
 msgstr "mensual"
@@ -1486,6 +1759,7 @@ msgid "partner"
 msgstr "Cliente"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.>pit_fee_view_search
 #: selection:pit.fee,state:0
 msgid "pay"
 msgstr "pagar"
@@ -1534,6 +1808,11 @@ msgid "school"
 msgstr "escuela"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.pit_student_form_view
+msgid "send user link"
+msgstr "Enviar usuario"
+
+#. module: pitman_base
 #: model:ir.ui.view,arch_db:pitman_base.>pit_fee_view_search
 msgid "state"
 msgstr "estado"
@@ -1542,6 +1821,7 @@ msgstr "estado"
 #: model:ir.model,name:pitman_base.model_pit_student
 #: model:ir.model,name:pitman_base.model_pit_student_family
 #: model:ir.ui.view,arch_db:pitman_base.pit_student_tree
+#: model:ir.ui.view,arch_db:pitman_base.pitman_student_search
 msgid "student"
 msgstr "estudiante"
 
@@ -1550,6 +1830,7 @@ msgstr "estudiante"
 #: model:ir.ui.menu,name:pitman_base.menu_pit_teacher_root
 #: model:ir.ui.view,arch_db:pitman_base.pit_teacher_form_view
 #: model:ir.ui.view,arch_db:pitman_base.pit_teacher_tree
+#: model:ir.ui.view,arch_db:pitman_base.teacher_filter
 msgid "teacher"
 msgstr "Profesor"
 
@@ -1565,6 +1846,7 @@ msgid "tehory"
 msgstr "Teoria"
 
 #. module: pitman_base
+#: model:ir.model.fields,field_description:pitman_base.field_pit_enrollment_date_to
 #: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_calendar_hour_to
 #: model:ir.model.fields,field_description:pitman_base.field_pit_school_course_group_date_to
 msgid "to"
@@ -1584,6 +1866,9 @@ msgid "type"
 msgstr "tipo"
 
 #. module: pitman_base
+#: model:ir.ui.view,arch_db:pitman_base.>pit_fee_view_search
+#: model:ir.ui.view,arch_db:pitman_base.pit_enrollment_view_search
+#: model:ir.ui.view,arch_db:pitman_base.pit_student_form_view
 #: selection:pit.fee,state:0
 msgid "unpaid"
 msgstr "impago"
@@ -1592,4 +1877,3 @@ msgstr "impago"
 #: model:ir.ui.view,arch_db:pitman_base.view_pit_school_course
 msgid "workload"
 msgstr "Carga"
-

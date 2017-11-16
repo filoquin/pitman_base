@@ -77,6 +77,16 @@
             <field name="view_id" ref="view_pit_fee_tree" />
         </record>
 
+        <record id="pit_fee_action_by_sudent" model="ir.actions.act_window">
+            <field name="name">fees</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pit.fee</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_pit_fee_tree" />
+            <field name="context">{'search_default_student_id': [active_id]}</field>
+
+        </record>
+
         <menuitem id="menu_st_pit_fee" action="pit_fee_action" name="Fees" parent="menu_pit_student_root" sequence="30"/>
 
         <menuitem id="menu_pit_fee" action="pit_fee_action" name="Fees" parent="menu_pit_config_root" sequence="30"/>
