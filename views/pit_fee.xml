@@ -10,6 +10,8 @@
                     <field name="partner_id"/>
                     <field name="date_due"/>
                     <field name="amount"/>
+                    <field name="debt"/>
+
                     <field name="state"/>
                 </tree>
             </field>
@@ -25,15 +27,17 @@
                     </header>
 
                     <h2><field name="name"/></h2>
+                    <h3><field name="debt"/></h3>
                     <group col="4">
-                    <field name="fee"/>
-                    <field name="total_fee"/>
-                    <field name="enrollment_id"/>
-                    <field name="partner_id"/>
-                    <field name="product_type"/>
-                    <field name="date_due"/>
-                    <field name="payment_day"/>
-                    <field name="amount"/>
+                    <field name="fee"  readonly="True"/>
+                    <field name="total_fee" readonly="True"/>
+                    <field name="enrollment_id"  readonly="True"/>
+                    <field name="partner_id"  readonly="True"/>
+                    <field name="product_type"  readonly="True"/>
+                    <field name="date_due"  readonly="True"/>
+                    <field name="payment_day"  readonly="True"/>
+                    <field name="amount" readonly="True"/>
+                    <field name="pay_amount" readonly="True"/>
 
 
 
@@ -87,7 +91,7 @@
 
         </record>
 
-        <menuitem id="menu_st_pit_fee" action="pit_fee_action" name="Fees" parent="menu_pit_student_root" sequence="30"/>
+        <menuitem id="menu_st_pit_fee" action="pit_fee_action" name="Fees" parent="menu_pitst_group" sequence="30"/>
 
         <menuitem id="menu_pit_fee" action="pit_fee_action" name="Fees" parent="menu_pit_config_root" sequence="30"/>
 

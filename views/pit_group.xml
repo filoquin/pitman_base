@@ -63,6 +63,8 @@
                                         <field name="student_id"/>
                                         <field name="partner_id"/>
                                         <field name="pricelist_id"/>
+                                        <field name="current_debt"/>
+                                        
                                         <field name="state"/>
                                 </tree>
                             </field>
@@ -138,7 +140,8 @@
         <menuitem id="menu_pit_school_course_group" action="pit_school_course_group_action" name="Grup" parent="menu_pit_config_courses" sequence="30"/>
 
 
-        <menuitem id="menu_pitst_school_course_group" action="pit_school_course_group_action" name="Grup" parent="menu_pit_student_root" sequence="30"/>
+        <menuitem id="menu_pitst_group"  name="cursadas" parent="menu_pit_coursemenu_root" sequence="40"/>
+        <menuitem id="menu_pitst_school_course_group" action="pit_school_course_group_action" name="Grup" parent="menu_pitst_group" sequence="10"/>
 
 
 

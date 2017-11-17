@@ -1762,7 +1762,7 @@ msgstr "Cliente"
 #: model:ir.ui.view,arch_db:pitman_base.>pit_fee_view_search
 #: selection:pit.fee,state:0
 msgid "pay"
-msgstr "pagar"
+msgstr "pagado"
 
 #. module: pitman_base
 #: selection:pit.school.workload,name:0

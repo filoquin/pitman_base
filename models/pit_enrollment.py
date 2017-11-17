@@ -39,20 +39,32 @@ class pit_enrollment(models.Model):
     _name = "pit.enrollment"
     _description = "enrollment"
 
+
+    @api.model
+    def default_date(self):
+        return fields.Date.today()
+
+    @api.model
+    def _default_product_pricelist(self):
+        return self.env['product.pricelist'].search([], limit=1)
+
+
     state = fields.Selection([('draft','Draft'),('active','active'),('cancel','cancel'),('abandoned','abandoned'),('finish','finish')],default='draft')
 
     student_id = fields.Many2one('pit.student', 'Student')
+    current_debt = fields.Float('current debt',related='student_id.current_debt') 
+
     group_id = fields.Many2one('pit.school.course.group', 'group')
     date_from = fields.Date('from',related='group_id.date_from')
     date_to = fields.Date('to',related='group_id.date_to')
     course_id = fields.Many2one('pit.school.course','Course',related='group_id.course_id')
 
-    enrollment_date = fields.Date('Date')
+    enrollment_date = fields.Date('Date',default=lambda self: self.default_date())
 
     partner_id = fields.Many2one('res.partner', 'partner')    
     fees = fields.Integer('fees',default=1,min=1,max=12)
-    pricelist_id = fields.Many2one('product.pricelist', 'pricelist')
-  
+    pricelist_id = fields.Many2one('product.pricelist', 'pricelist',default=_default_product_pricelist)
+
     name = fields.Char('Name',compute="_compute_name")
 
 
@@ -60,6 +72,12 @@ class pit_enrollment(models.Model):
     def _default_date(self):
         return fields.Date.context_today(self)
 
+
+    @api.depends('student_id')
+    @api.onchange('student_id')
+    @api.one
+    def _compute_partner(self):
+        self.partner_id = self.student_id.partner_id.id
 
 
     @api.depends('student_id','group_id')
@@ -102,6 +120,7 @@ class pit_enrollment(models.Model):
 
         product_ids =[]
         amount = 0
+
         for product_line in self.group_id.product_ids:
             if product_line.product_type=='inscription':
                 price = self.pricelist_id.price_get( product_line.product_id.id, 
@@ -119,23 +138,25 @@ class pit_enrollment(models.Model):
             date_due = enrollment_date.replace(day=DEFAULT_DUE_DAY) 
 
 
+        if len(enrollment_product_ids):
 
-        for fee_n in range(0, self.fees):
+            for fee_n in range(0, self.fees):
 
 
-            fee={'name':'%i of %i'%(fee_n +1,self.fees),
-                 'fee':fee_n +1,
-                 'total_fee':self.fees,
-                 #'product_ids':((6,0,product_ids)),
-                 'amount':enrollment_amount,
-                 'enrollment_id':self.id,
-                 'partner_id':self.partner_id.id,                 
-                 'product_type':'enrollment',
-                 'date_due' : date_due,
-                 }
-            self.env['pit.fee'].create(fee)
-            date_due = enrollment_date.replace(day=DEFAULT_DUE_DAY) + relativedelta(months=fee_n)
-            self.state='active'
+                fee={'name':'%i of %i'%(fee_n +1,self.fees),
+                     'fee':fee_n +1,
+                     'total_fee':self.fees,
+                     #'product_ids':((6,0,product_ids)),
+                     'amount':enrollment_amount,
+                     'enrollment_id':self.id,
+                     'partner_id':self.partner_id.id,                 
+                     'product_type':'enrollment',
+                     'date_due' : date_due,
+                     }
+                self.env['pit.fee'].create(fee)
+                date_due = enrollment_date.replace(day=DEFAULT_DUE_DAY) + relativedelta(months=fee_n)
+
+        self.state='active'
 
         from_date_due=fields.Date.from_string(self.group_id.date_from).replace(day=10) 
 
@@ -171,7 +192,7 @@ class pit_fee(models.Model):
     _name = "pit.fee"
     _description = "fee"
 
-    state = fields.Selection([('unpaid','unpaid'),('process','process pay'),('pay','pay'),('cancel','cancel')],default='unpaid')
+    state = fields.Selection([('unpaid','unpaid'),('process','process pay'),('partial pay','partial pay'),('pay','pay'),('cancel','cancel')],default='unpaid')
     name = fields.Char('Name')
     fee = fields.Integer('fee N')
     total_fee = fields.Integer('Total Fee')
@@ -185,8 +206,15 @@ class pit_fee(models.Model):
     payment_day = fields.Date('Payment Date')
     amount = fields.Float('amount')
     pay_amount = fields.Float('amount')
+    debt = fields.Float('debt',compute="_compute_debit",store=True)
 
     product_ids = fields.One2many('pit.fee.product','fee_id',string='product')
+
+    @api.multi
+    @api.depends('amount','pay_amount')
+    def _compute_debit(self):
+        for fee in self:
+            fee.debt= fee.amount - fee.pay_amount
 
     @api.multi
     def do_cancel(self):

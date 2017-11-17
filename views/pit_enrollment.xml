@@ -17,12 +17,14 @@
         </record>
 
         <record id="view_pit_enrollment" model="ir.ui.view">
-            <field name="name">Group</field>
+            <field name="name">enrollment</field>
             <field name="model">pit.enrollment</field>
             <field name="arch" type="xml">
-                <form string="Group">
+                <form string="Enrollment">
                     <header>
 
+                       <button  class="btn"  type="object" string="cancel"
+                            name="do_cancel" states="active">cancel</button>
                         <field name="state" widget="statusbar"/>
 
                     </header>
@@ -84,7 +86,7 @@
      
 
 
-        <menuitem id="menu_pitst_enrollment" action="pit_enrollment_action" name="Enrollment" parent="menu_pit_student_root" sequence="30"/>
+        <menuitem id="menu_pitst_enrollment" action="pit_enrollment_action" name="Enrollment" parent="menu_pitst_group" sequence="30"/>
         <menuitem id="menu_pit_enrollment" action="pit_enrollment_action" name="Enrollment" parent="menu_pit_config_root" sequence="30"/>
 
 

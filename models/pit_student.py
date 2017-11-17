@@ -87,10 +87,9 @@ class pit_student(models.Model):
     @api.one
     def _compute_active_course(self):
         ids = []
-        active_courses=self.env['pit.enrollment'].search([('student_id','=',self.id),('group_id.date_to','>',fields.Date.today())])
+        active_courses=self.env['pit.enrollment'].search([('state','=','active'),('student_id','=',self.id),('group_id.date_to','>',fields.Date.today())])
         for  enrollment in active_courses:
             ids.append(enrollment.group_id.course_id.id)
-        _logger.info('ids %r'%ids)
         self.active_course_ids = ids
  
     @api.one
