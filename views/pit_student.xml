@@ -211,7 +211,7 @@
                         <field name="gender"/>
                         <field name="enrollment_ids"/>
                         <field name="last_payment_fee"/>
-                        <filter string="actives" domain="[('enrollment_ids.group_id','=','active'),('enrollment_ids.group_id.date_to','>',datetime.datetime.now().strftime('%Y-%m-%d'))]" context="" />
+                        <filter string="actives" domain="[('enrollment_ids.state','=','active'),('enrollment_ids.group_id.date_to','>',datetime.datetime.now().strftime('%Y-%m-%d'))]" context="" />
 
                     <group expand="0" string="Group By...">
                         <filter string="Name" domain="[]" context="{'group_by':'name'}" />
