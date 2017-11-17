@@ -36,8 +36,8 @@
                     <field name="product_type"  readonly="True"/>
                     <field name="date_due"  readonly="True"/>
                     <field name="payment_day"  readonly="True"/>
-                    <field name="amount" readonly="True"/>
-                    <field name="pay_amount" readonly="True"/>
+                    <field name="amount" readonly="True" sum='Total'/>
+                    <field name="pay_amount" readonly="True" sum='pay'/>
 
 
 
