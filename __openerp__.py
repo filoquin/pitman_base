@@ -41,6 +41,7 @@
         'data/groups.xml',
         'security/ir.model.access.csv',
         'views/pitman.xml',
+        'views/pit_fee.xml',
         'views/pit_student.xml',
         'views/pit_teacher.xml',
         'views/pit_location.xml',
@@ -48,7 +49,6 @@
         'views/pit_course.xml',
         'views/pit_group.xml',
         'views/pit_enrollment.xml',
-        'views/pit_fee.xml',
         'views/pit_do_enrollment.xml',
         
     ],
