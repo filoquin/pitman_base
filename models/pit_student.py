@@ -58,8 +58,8 @@ class pit_student(models.Model):
     allergies = fields.Char('Allergies' )
 
     enrollment_ids = fields.One2many('pit.enrollment','student_id') 
-    last_payment_fee = fields.Date('last fee',compute="_compute_last_fee") 
-    current_debt = fields.Float('current debt',compute="_compute_current_debt") 
+    last_payment_fee = fields.Date('last fee',compute="_compute_last_fee",store=True) 
+    current_debt = fields.Float('current debt',compute="_compute_current_debt",store=True) 
     active_course_ids = fields.One2many('pit.school.course','id',compute='_compute_active_course') 
 
     @api.model
@@ -85,6 +85,7 @@ class pit_student(models.Model):
  
 
     @api.one
+    @api.depends('enrollment_ids')
     def _compute_active_course(self):
         ids = []
         active_courses=self.env['pit.enrollment'].search([('state','=','active'),('student_id','=',self.id),('group_id.date_to','>',fields.Date.today())])
@@ -93,6 +94,7 @@ class pit_student(models.Model):
         self.active_course_ids = ids
  
     @api.one
+    @api.depends('enrollment_ids')
     def _compute_current_debt(self):
         fees=self.env['pit.fee'].search([('enrollment_id.student_id','=',self.id),('state','=','unpaid'),('date_due','<',fields.Date.today())])     
         amount= 0.0
@@ -102,11 +104,18 @@ class pit_student(models.Model):
 
 
     @api.one
+    @api.depends('enrollment_ids')    
     def _compute_last_fee(self):
         last_fee=self.env['pit.fee'].search([('enrollment_id.student_id','=',self.id),('state','=','pay')],
                                             limit=1,order="date_due DESC")
         if last_fee:
             self.last_payment_fee=last_fee.date_due
+
+    @api.multi
+    def recompute_student(self):
+        self._compute_active_course()
+        self._compute_current_debt()
+        self._compute_last_fee()
 
 
     ## agrego compatibilidad con herencia de res_partner de estas funciones que no
