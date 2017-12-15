@@ -24,3 +24,4 @@ import pit_teacher
 import pit_location
 import pit_school
 import pit_enrollment
+import res_partner
