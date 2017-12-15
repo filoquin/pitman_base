@@ -19,6 +19,12 @@
 #
 ##############################################################################
 from openerp import models, fields, api
+from openerp import tools
+
+import logging
+
+_logger = logging.getLogger(__name__)
+
 
 
 class res_partner(models.Model):
@@ -28,6 +34,7 @@ class res_partner(models.Model):
         string='Student',
         help='Check if the partner is a Student',
     )
+ 
     is_teacher = fields.Boolean(
         string='Teacher',
         help='Check if the partner is a Teacher',
