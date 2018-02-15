@@ -94,7 +94,7 @@ class pit_enrollment(models.Model):
     @api.one
     def do_cancel(self):
         
-        fees = self.env["pit.fee"].search([('enrollment_id','=',self.id),('state','!=','pay')]).write({'state':'cancel'})        
+        fees = self.env["pit.fee"].search([('enrollment_id','=',self.id),('state','!=','pay')])        
         self.state='cancel'
 
 
@@ -293,3 +293,22 @@ class pit_do_enrollment(models.TransientModel):
 
 
 
+
+class pit_do_unenrollment(models.TransientModel):
+
+
+    _name = "pit.do_unenrollment"
+    _description = "Make unenrollment"
+
+    enrollment_id = fields.Many2one('pit.enrollment', 'enrollment')
+    date_from = fields.Date('Date from')
+
+
+    @api.one
+    def do(self):
+
+        fees = self.env['pit.fee'].search([('state','=','unpaid'),('enrollment_id','=',self.enrollment_id.id),('date_due','>=',self.date_from)])
+        _logger.info(fees)
+        fees.write({'state':'cancel'})
+
+        self.enrollment_id.state = 'cancel'

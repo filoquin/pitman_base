@@ -45,6 +45,7 @@
                         <field name="date_from"/>
                         <field name="date_to"/>
                         <field name="teacher_id"/>
+                        <field name="asistant_ids" widget="many2many_tags"/>
                         <field name="company_id"/>
 
                         <field name="active"/>
@@ -103,6 +104,8 @@
                                 <field name="hour_from" widget="float_time"/>
                                 <field name="hour_to" widget="float_time"/>
                                 <field name="teacher_id"/>
+                                 <field name="asistant_ids" widget="many2many_tags"/>
+
                                 <field name="classroom_id" domain="[('location_id','=',parent.location_id)]"/>
                                 <field name="date_from"/>
                                 <field name="date_to"/>

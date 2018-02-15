@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_pit_do_unenrollment" model="ir.ui.view">
+            <field name="name">unerrolment</field>
+            <field name="model">pit.do_unenrollment</field>
+            <field name="arch" type="xml">
+                <form string="Group">
+                    <header>
+                    </header>
+
+                    <sheet >
+                    <h2><field name="enrollment_id" attrs="{'readonly':True}"/></h2>
+                    
+                    <group>
+                    <field name="date_from" />
+                    </group>
+                    </sheet>
+                    
+
+                    <footer>
+                         <button class="oe_inline oe_stat_button" type="object"  name="do" string="">Unenroll</button>                        
+                    </footer>
+
+                </form>
+            </field>
+        </record>
+
+
+        <record id="pit_do_unenrollment_action" model="ir.actions.act_window">
+            <field name="name">unenrollments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pit.do_unenrollment</field>
+            <field name="target">new</field>
+            <field name="context">{'default_enrollment_id': context.get('enrollment_id', False),}</field>
+
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_pit_do_unenrollment" />
+        </record>
+
+
+
+    </data>
+</openerp>

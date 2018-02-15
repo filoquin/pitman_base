@@ -51,10 +51,10 @@ class pit_school_course(models.Model):
 
     school_id = fields.Many2one('pit.school','school')
     teacher_id = fields.Many2one('pit.teacher','Teacher')
+    asistant_ids = fields.Many2many('pit.teacher',string='asistant')
 
     product_ids = fields.One2many('pit.course.product','course_id',string='product')
     workload_ids = fields.One2many('pit.school.workload','course_id',string='Workloads')
-
 
     description = fields.Html('description')
     title = fields.Char('Title')
@@ -105,6 +105,8 @@ class pit_school_course_group(models.Model):
     date_from = fields.Date('from')
     date_to = fields.Date('to')
     teacher_id = fields.Many2one('pit.teacher','Teacher')
+    asistant_ids = fields.Many2many('pit.teacher',string='asistant')
+
     company_id = fields.Many2one('res.company', 'Company')
     location_id = fields.Many2one('pit.location','Location')
     calendar_ids = fields.One2many('pit.school.course.calendar','group_id',string='Calendar')
@@ -138,6 +140,10 @@ class pit_school_course_group(models.Model):
     @api.depends('course_id',)
     @api.onchange('course_id')
     def set_products(self):
+        self.teacher_id = self.course_id.teacher_id.id
+        asistant_ids = [(4,x.id)  for x in self.course_id.asistant_ids]
+        self.asistant_ids=asistant_ids
+
         self.product_ids=False
         products =[]
         for product_id in self.course_id.product_ids :
@@ -147,7 +153,7 @@ class pit_school_course_group(models.Model):
         self.calendar_ids=False
         calendars =[]
         for workload_id in self.course_id.workload_ids :
-            calendars.append((0,0,{'name':workload_id.id}))
+            calendars.append((0,0,{'name':workload_id.id,'teacher_id':self.course_id.teacher_id.id,'asistant_ids':asistant_ids}))
         self.calendar_ids= calendars
 
 
@@ -199,6 +205,8 @@ class pit_school_course_calendar(models.Model):
     hour_from = fields.Float('from', required=True, help="Start and End time of class.", select=True)
     hour_to = fields.Float("to", required=True)
     teacher_id = fields.Many2one('pit.teacher','Teacher')
+    asistant_ids = fields.Many2many('pit.teacher',string='asistant')
+
     classroom_id = fields.Many2one('pit.location.classroom','Classroom',domain="[('location_id','=',location_id)]")
 
 

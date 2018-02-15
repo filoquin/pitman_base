@@ -26,6 +26,7 @@
                         <field name="name" colspan="4" required="True"/>
                         <field name="code" required="True"/>
                         <field name="teacher_id" />
+                        <field name="asistant_ids" widget="many2many_tags"/>
                         <field name="school_id" />
                         <field name="active" />
 

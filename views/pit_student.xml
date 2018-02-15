@@ -129,15 +129,14 @@
                 <field name="company_type" position="replace"/>
 
 
-                  <xpath expr="//notebook[last()]" position="inside">
+                  <xpath expr="//notebook[1]" position="inside">
 
                     <page string="Academy">
                     <group>
                     
                         <field name="enrollment_ids">
                              <tree  >
-                                <field name="partner_id" invisible="True" />
-                                <field name="student_id" invisible="True" />
+                                <field name="id" invisible="True" />
                                 <field name="name" />
                                 <field name="state" />
                                 <field name="date_from" />
@@ -145,6 +144,9 @@
                                            <button   class="oe_inline oe_stat_button"  type="action" string="Fees"
                                                 name="%(pit_fee_action)d" 
                                                 context="{'search_default_enrollment_id': id}">Fees</button>
+                                           <button   class="oe_inline oe_stat_button"  type="action" string="Unenroll"
+                                                name="%(pit_do_unenrollment_action)d" 
+                                                context="{'enrollment_id': id}">Unenroll</button>
 
                             </tree>
 
