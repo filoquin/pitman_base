@@ -67,9 +67,13 @@
                                         <field name="current_debt"/>
                                         
                                         <field name="state"/>
-                                           <button   class="oe_inline oe_stat_button"  type="action" string="Fees"
+                                           <button  class="oe_inline oe_stat_button"  type="action" string="Unenroll"
+                                                name="%(pit_do_unenrollment_action)d" 
+                                                context="{'enrollment_id': active_id}">Unenroll</button>
+                                           
+                                           <button   class="oe_inline oe_stat_button"   type="action" string="Fees"
                                                 name="%(pit_fee_action)d" 
-                                                context="{'search_default_enrollment_id': id}">Fees</button>
+                                                context="{'search_default_enrollment_id': active_id}">Fees</button>
 
                                 </tree>
                             </field>

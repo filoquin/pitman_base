@@ -129,11 +129,11 @@
                 <field name="company_type" position="replace"/>
 
 
-                  <xpath expr="//notebook[1]" position="inside">
+                  <xpath expr="//notebook[last()]/page[1]" position="before">
 
-                    <page string="Academy">
+                    <page string="Academy" autofocus="True">
                     <group>
-                    
+                        <span>
                         <field name="enrollment_ids">
                              <tree  >
                                 <field name="id" invisible="True" />
@@ -151,6 +151,7 @@
                             </tree>
 
                         </field>
+                        </span>
                       </group>
                     </page>
 
