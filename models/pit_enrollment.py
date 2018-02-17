@@ -67,6 +67,8 @@ class pit_enrollment(models.Model):
 
     name = fields.Char('Name',compute="_compute_name")
 
+    unenrollment_date = fields.Date('Date')
+    unenrollment_comment = fields.Text('comment unenrollment')
 
     @api.model
     def _default_date(self):
@@ -302,6 +304,7 @@ class pit_do_unenrollment(models.TransientModel):
 
     enrollment_id = fields.Many2one('pit.enrollment', 'enrollment')
     date_from = fields.Date('Date from')
+    comment = fields.Text('comment')
 
 
     @api.one
@@ -311,4 +314,5 @@ class pit_do_unenrollment(models.TransientModel):
         _logger.info(fees)
         fees.write({'state':'cancel'})
 
-        self.enrollment_id.state = 'cancel'
+        enrollment ={'state':'cancel', 'unenrollment_date' : self.date_from,'unenrollment_comment': self.comment}
+        self.enrollment_id.write(enrollment)

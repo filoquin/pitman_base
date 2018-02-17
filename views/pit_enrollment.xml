@@ -34,7 +34,10 @@
                     <field name="name" colsapan="4"/>
                     <field name="enrollment_date"/>
                     </group>
-                    
+                    <group col="4" attrs="{'invisible':[('unenrollment_date','=',False)]}">
+                        <field name="unenrollment_date" attrs="{'readonly':True}"/>
+                        <field name="unenrollment_comment" attrs="{'readonly':True}"/>
+                    </group>                    
                     <group col="4" string="invoice">
                     <field name="partner_id"/>
                     <field name="fees"/>
