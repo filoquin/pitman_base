@@ -32,12 +32,15 @@ class pit_school(models.Model):
 
     _name = "pit.school"
     _description = "school"
+    _order = "sequence asc"
+
 
     code = fields.Char('Code' , index=True)
     name = fields.Char('Name')
     course_ids = fields.One2many('pit.school.course','school_id',string='Curses')
     teacher_id = fields.Many2one('pit.teacher','Teacher')
 
+    sequence = fields.Integer('sequence', help="Sequence for the handle.",default=10)
     active = fields.Boolean('Active', default=True)
 
 
@@ -45,6 +48,9 @@ class pit_school_course(models.Model):
 
     _name = "pit.school.course"
     _description = "Course"
+
+    _order = "sequence asc"
+
 
     code = fields.Char('Code', index=True)
     name = fields.Char('Name')
@@ -59,6 +65,7 @@ class pit_school_course(models.Model):
     description = fields.Html('description')
     title = fields.Char('Title')
 
+    sequence = fields.Integer('sequence', help="Sequence for the handle.",default=10)
     active = fields.Boolean('Active', default=True)
 
     @api.onchange('name')
@@ -98,6 +105,7 @@ class pit_school_course_group(models.Model):
     _name = "pit.school.course.group"
     _description = "Course group"
 
+    
     code = fields.Char('Code', index=True)
     name = fields.Char('Name')
     course_id = fields.Many2one('pit.school.course','Course')

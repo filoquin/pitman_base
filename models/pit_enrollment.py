@@ -160,16 +160,23 @@ class pit_enrollment(models.Model):
 
         self.state='active'
 
+        '''
         from_date_due=fields.Date.from_string(self.group_id.date_from).replace(day=10) 
+        
+        if from_date_due.day >= DEFAULT_END_DAY :
+            from_date_due = from_date_due.replace(day=DEFAULT_DUE_DAY) + relativedelta(months=1)
+        else :
+            from_date_due = from_date_due.replace(day=DEFAULT_DUE_DAY) 
 
+        ''' 
+        from_date_due=max(fields.Date.from_string(self.enrollment_date),fields.Date.from_string(self.group_id.date_from)).replace(day=10)
         to_date_due=fields.Date.from_string(self.group_id.date_to).replace(day=10) 
 
         i = 0
         currentDate = from_date_due
         while currentDate < to_date_due:
-            _logger.info('currentDate %r'%currentDate)
             i += 1
-            fee={'name':'mes %i'% i,
+            fee={'name':'%s %i'% (self.name,i),
                  'fee':i,
                  'total_fee':mensual_amount,
                  #'product_ids':((6,0,product_ids)),
