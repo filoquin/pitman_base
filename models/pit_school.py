@@ -19,8 +19,6 @@
 #
 ##############################################################################
 from openerp import models, fields, api
-from openerp import tools
-
 from openerp.tools.translate import _
 
 import logging

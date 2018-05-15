@@ -19,8 +19,7 @@
 #
 ##############################################################################
 from openerp import models, fields, api
-from openerp import tools
-from openerp.exceptions import UserError, ValidationError
+from openerp.exceptions import ValidationError
 
 from openerp.tools.translate import _
 
@@ -96,7 +95,7 @@ class pit_student(models.Model):
     @api.one
     @api.depends('enrollment_ids')
     def _compute_current_debt(self):
-        fees=self.env['pit.fee'].search([('enrollment_id.student_id','=',self.id),('state','=','unpaid'),('date_due','<',fields.Date.today())])     
+        fees=self.env['pit.fee'].search([('student_id','=',self.id),('state','in',['unpaid','partial pay']),('date_due','<',fields.Date.today())])     
         amount= 0.0
         for x in fees:
             amount+=(x.amount - x.pay_amount) 
@@ -106,7 +105,7 @@ class pit_student(models.Model):
     @api.one
     @api.depends('enrollment_ids')    
     def _compute_last_fee(self):
-        last_fee=self.env['pit.fee'].search([('enrollment_id.student_id','=',self.id),('state','=','pay')],
+        last_fee=self.env['pit.fee'].search([('student_id','=',self.id),('state','=','pay')],
                                             limit=1,order="date_due DESC")
         if last_fee:
             self.last_payment_fee=last_fee.date_due
