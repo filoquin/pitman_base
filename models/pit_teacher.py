@@ -54,6 +54,23 @@ class pit_teacher(models.Model):
 
     employee_id = fields.Many2one('hr.employee', 'Employee')
 
+    @api.multi
+    def message_get_suggested_recipients(self):
+        return self.partner_id.message_get_suggested_recipients()
+    
+    @api.multi
+    def message_partner_info_from_emails(self, emails, link_mail=False):
+        return self.partner_id.message_partner_info_from_emails( emails, link_mail)
+    @api.multi
+    @api.returns('self', lambda value: value.id)
+    def message_post(self, body='', subject=None, message_type='notification',
+                     subtype=None, parent_id=False, attachments=None,
+                     content_subtype='html', **kwargs):
+        return self.partner_id.message_post(body, subject, message_type,
+                     subtype, parent_id, attachments,
+                     content_subtype, **kwargs)
+
+
     @api.model
     @api.returns('self', lambda value: value.id)
     def create(self, vals):

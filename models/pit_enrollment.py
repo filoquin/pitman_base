@@ -19,10 +19,9 @@
 #
 ##############################################################################
 from openerp import models, fields, api
-from datetime import datetime , timedelta , date
+from datetime import datetime, timedelta, date
 from dateutil.relativedelta import relativedelta
 
-from openerp.tools.translate import _
 
 import logging
 

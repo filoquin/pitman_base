@@ -37,6 +37,7 @@ class pit_student(models.Model):
     code = fields.Char('Code' , index=True)
     emergency_contact = fields.Char('Emergency Contact')
     family_ids = fields.One2many('pit.student.family','student_id','Family')
+
     #health_detail_ids = fields.One2many('pit_health_detail','student_id','Health')
 
 
@@ -60,6 +61,8 @@ class pit_student(models.Model):
     last_payment_fee = fields.Date('last fee',compute="_compute_last_fee",store=True) 
     current_debt = fields.Float('current debt',compute="_compute_current_debt",store=True) 
     active_course_ids = fields.One2many('pit.school.course','id',compute='_compute_active_course') 
+
+
 
     @api.model
     @api.returns('self', lambda value: value.id)
@@ -116,25 +119,6 @@ class pit_student(models.Model):
         self._compute_current_debt()
         self._compute_last_fee()
 
-
-    ## agrego compatibilidad con herencia de res_partner de estas funciones que no
-    ## son heredadas 
-
-    @api.multi
-    def on_change_company_type(self, company_type):
-        return {'value': {'is_company': company_type == 'company'}}
-
-
-    @api.multi
-    def onchange_parent_id(self, parent_id):
-        pass
-    @api.multi
-    def onchange_state(self, state_id):
-        if state_id:
-            state = self.env['res.country.state'].browse(state_id)
-            return {'value': {'country_id': state.country_id.id}}
-        return {'value': {}}
-
     @api.multi
     def list_fees(self):
 
@@ -155,6 +139,43 @@ class pit_student(models.Model):
 
 
 
+
+    ## agrego compatibilidad con herencia de res_partner de estas funciones que no
+    ## son heredadas 
+
+    @api.multi
+    def on_change_company_type(self, company_type):
+        return {'value': {'is_company': company_type == 'company'}}
+
+
+    @api.multi
+    def onchange_parent_id(self, parent_id):
+        pass
+    @api.multi
+    def onchange_state(self, state_id):
+        if state_id:
+            state = self.env['res.country.state'].browse(state_id)
+            return {'value': {'country_id': state.country_id.id}}
+        return {'value': {}}
+
+    @api.multi
+    def message_get_suggested_recipients(self):
+        return self.partner_id.message_get_suggested_recipients()
+    
+    @api.multi
+    def message_partner_info_from_emails(self, emails, link_mail=False):
+        return self.partner_id.message_partner_info_from_emails( emails, link_mail)
+    @api.multi
+    @api.returns('self', lambda value: value.id)
+    def message_post(self, body='', subject=None, message_type='notification',
+                     subtype=None, parent_id=False, attachments=None,
+                     content_subtype='html', **kwargs):
+        return self.partner_id.message_post(body, subject, message_type,
+                     subtype, parent_id, attachments,
+                     content_subtype, **kwargs)
+
+
+
 class pit_student_family(models.Model):
 
     _name = "pit.student.family"
@@ -165,3 +186,9 @@ class pit_student_family(models.Model):
     partner_id = fields.Many2one('res.partner','Person')
     phone = fields.Char('Phone',related='partner_id.phone')
 
+"""
+class pit_student_message(models.Model):
+
+    _name = "pit.student"
+    _inherit = ['pit.student','mail.message']
+"""

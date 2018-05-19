@@ -157,8 +157,7 @@
 
 
                     <page string="Student">
-                                    <group>
-
+                    <group>
                         <field name="emergency_contact"/>
                         <field name="gender"/>
                         <field name="blood_group"/>        
